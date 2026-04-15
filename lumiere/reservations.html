@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Reserve your table at Lumière. Experience award-winning fine dining in the heart of Mayfair. Book online or contact us directly for private dining enquiries.">
+    
+    <title>Lumière — Reserve a Table | Fine Dining Restaurant</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Playfair+Display:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Flatpickr CSS - Only on this page -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/utilities.css">
+    <link rel="stylesheet" href="assets/css/pages/reservations.css">
+</head>
+<body>
+
+    <!-- Page Loader -->
+    <div id="page-loader">
+        <div class="loader-content">
+            <img src="assets/images/brand/logo.webp" alt="Lumière logo" class="loader-logo">
+            <div class="loader-bar"></div>
+        </div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor"></div>
+    <div class="custom-cursor-dot"></div>
+
+    <!-- Navbar -->
+    <div id="navbar-container"></div>
+
+
+    <!-- •••••••••••••••••••••••••••••••••••••••••••••••
+         SECTION 1 — PAGE HERO
+         ••••••••••••••••••••••••••••••••••••••••••••••• -->
+    <section class="reservations-hero" id="reservations-hero"><div class="reservations-hero-bg" style="background-image: url('assets/images/hero/hero-reservations.webp')"></div>
+        <div class="reservations-hero-overlay"></div>
+        
+        <div class="reservations-hero-content">
+            <!-- Breadcrumb -->
+            <nav class="reservations-breadcrumb" id="reservations-breadcrumb" aria-label="Breadcrumb">
+                <a href="index.html" class="breadcrumb-link">Home</a>
+                <span class="breadcrumb-separator">→’</span>
+                <span class="breadcrumb-current">Reserve a Table</span>
+            </nav>
+            
+            <!-- Gold Label -->
+            <p class="reservations-hero-label" id="reservations-hero-label">RESERVATIONS</p>
+            
+            <!-- Main Heading -->
+            <h1 class="reservations-hero-heading" id="reservations-hero-heading">Reserve Your Table</h1>
+            
+            <!-- Subheading -->
+            <p class="reservations-hero-subheading" id="reservations-hero-subheading">We look forward to welcoming you to Lumière.</p>
+            
+            <!-- Trust Indicators -->
+            <div class="reservations-trust-items" id="reservations-trust-items">
+                <div class="trust-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="trust-icon">
+                        <rect width="18" height="18" x="3" y="4" rx="2" ry="2"/>
+                        <line x1="16" x2="16" y1="2" y2="6"/>
+                        <line x1="8" x2="8" y1="2" y2="6"/>
+                        <line x1="3" x2="21" y1="10" y2="10"/>
+                    </svg>
+                    <span>Instant Confirmation</span>
+                </div>
+                <div class="trust-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="trust-icon">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                    </svg>
+                    <span>Or call us — +44 20 0000 0000</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Bottom Separator -->
+        <div class="reservations-hero-separator" id="reservations-hero-separator"></div>
+    </section>
+
+
+    <!-- •••••••••••••••••••••••••••••••••••••••••••••••
+         SECTION 2 — RESERVATION FORM
+         Two column: form left (55%) + info right (45%)
+         ••••••••••••••••••••••••••••••••••••••••••••••• -->
+    <section class="reservation-form-section" id="reservation-form-section">
+        <div class="container">
+            <div class="reservation-layout">
+                
+                <!-- LEFT COLUMN — FORM CARD -->
+                <div class="reservation-form-wrapper">
+                    <div class="reservation-form-card" id="reservation-form-card">
+                        <h2 class="form-card-heading">Make a Reservation</h2>
+                        <p class="form-card-subtext">Complete the details below and we will confirm your reservation by email.</p>
+                        
+                        <form id="reservation-form" class="reservation-form" novalidate>
+                            
+                            <!-- Group 1: Personal Details -->
+                            <div class="form-row">
+                                <div class="form-field">
+                                    <label for="full-name" class="form-label">Full Name</label>
+                                    <input type="text" id="full-name" name="fullName" class="form-input" required>
+                                    <span class="form-error" id="error-full-name"></span>
+                                </div>
+                                <div class="form-field">
+                                    <label for="email" class="form-label">Email Address</label>
+                                    <input type="email" id="email" name="email" class="form-input" required>
+                                    <span class="form-error" id="error-email"></span>
+                                </div>
+                            </div>
+                            
+                            <!-- Group 2: Contact -->
+                            <div class="form-row">
+                                <div class="form-field">
+                                    <label for="phone" class="form-label">Phone Number</label>
+                                    <input type="tel" id="phone" name="phone" class="form-input" required>
+                                    <span class="form-error" id="error-phone"></span>
+                                </div>
+                                <div class="form-field">
+                                    <label for="guests" class="form-label">Number of Guests</label>
+                                    <div class="guest-stepper" id="guest-stepper">
+                                        <button type="button" class="stepper-btn stepper-minus" id="stepper-minus" aria-label="Decrease guests">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                <line x1="5" y1="12" x2="19" y2="12"/>
+                                            </svg>
+                                        </button>
+                                        <span class="stepper-value" id="stepper-value">2</span>
+                                        <button type="button" class="stepper-btn stepper-plus" id="stepper-plus" aria-label="Increase guests">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                <line x1="12" y1="5" x2="12" y2="19"/>
+                                                <line x1="5" y1="12" x2="19" y2="12"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <input type="hidden" id="guests" name="guests" value="2" required>
+                                    <span class="form-error" id="error-guests"></span>
+                                </div>
+                            </div>
+                            
+                            <!-- Group 3: Date and Time -->
+                            <div class="form-row">
+                                <div class="form-field">
+                                    <label for="date" class="form-label">Date</label>
+                                    <input type="text" id="date" name="date" class="form-input" placeholder="Select date" required readonly>
+                                    <span class="form-error" id="error-date"></span>
+                                </div>
+                                <div class="form-field">
+                                    <label for="time" class="form-label">Time</label>
+                                    <div class="custom-select" id="time-select-wrapper">
+                                        <button type="button" class="custom-select-trigger" id="time-select-trigger">
+                                            <span class="custom-select-value">Select time</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="custom-select-icon">
+                                                <polyline points="6 9 12 15 18 9"/>
+                                            </svg>
+                                        </button>
+                                        <div class="custom-select-dropdown" id="time-select-dropdown">
+                                            <div class="custom-select-option" data-value="18:00">6:00 PM</div>
+                                            <div class="custom-select-option" data-value="18:30">6:30 PM</div>
+                                            <div class="custom-select-option" data-value="19:00">7:00 PM</div>
+                                            <div class="custom-select-option" data-value="19:30">7:30 PM</div>
+                                            <div class="custom-select-option" data-value="20:00">8:00 PM</div>
+                                            <div class="custom-select-option" data-value="20:30">8:30 PM</div>
+                                            <div class="custom-select-option" data-value="21:00">9:00 PM</div>
+                                            <div class="custom-select-option" data-value="21:30">9:30 PM</div>
+                                            <div class="custom-select-option" data-value="22:00">10:00 PM</div>
+                                            <div class="custom-select-option" data-value="22:30">10:30 PM</div>
+                                        </div>
+                                    </div>
+                                    <input type="hidden" id="time" name="time" required>
+                                    <span class="form-error" id="error-time"></span>
+                                </div>
+                            </div>
+                            
+                            <!-- Group 4: Occasion -->
+                            <div class="form-row">
+                                <div class="form-field form-field-full">
+                                    <label for="occasion" class="form-label">Occasion (Optional)</label>
+                                    <div class="custom-select" id="occasion-select-wrapper">
+                                        <button type="button" class="custom-select-trigger" id="occasion-select-trigger">
+                                            <span class="custom-select-value">Select occasion</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="custom-select-icon">
+                                                <polyline points="6 9 12 15 18 9"/>
+                                            </svg>
+                                        </button>
+                                        <div class="custom-select-dropdown" id="occasion-select-dropdown">
+                                            <div class="custom-select-option" data-value="birthday">Birthday</div>
+                                            <div class="custom-select-option" data-value="anniversary">Anniversary</div>
+                                            <div class="custom-select-option" data-value="business">Business Dinner</div>
+                                            <div class="custom-select-option" data-value="romantic">Romantic Dinner</div>
+                                            <div class="custom-select-option" data-value="proposal">Proposal</div>
+                                            <div class="custom-select-option" data-value="celebration">Celebration</div>
+                                            <div class="custom-select-option" data-value="other">Other</div>
+                                        </div>
+                                    </div>
+                                    <input type="hidden" id="occasion" name="occasion">
+                                </div>
+                            </div>
+                            
+                            <!-- Group 5: Special Requests -->
+                            <div class="form-row">
+                                <div class="form-field form-field-full">
+                                    <label for="special-requests" class="form-label">Special Requests (Optional)</label>
+                                    <textarea id="special-requests" name="specialRequests" class="form-textarea" placeholder="Please share any dietary requirements, allergies, seating preferences, or special arrangements we should know about." maxlength="500"></textarea>
+                                    <div class="textarea-counter">
+                                        <span id="char-count">0</span> of 500
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Submit Button -->
+                            <button type="submit" class="btn btn-primary btn-submit" id="submit-btn">
+                                <span class="btn-text">Confirm Reservation</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="btn-icon">
+                                    <line x1="5" y1="12" x2="19" y2="12"/>
+                                    <polyline points="12 5 19 12 12 19"/>
+                                </svg>
+                                <span class="btn-loader" style="display: none;">
+                                    <svg class="spinner" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="12" r="10" opacity="0.25"/>
+                                        <path d="M12 2 A10 10 0 0 1 22 12" opacity="0.75"/>
+                                    </svg>
+                                </span>
+                            </button>
+                            
+                            <p class="form-footer-text">A confirmation will be sent to your email address. We typically confirm within 30 minutes.</p>
+                        </form>
+                    </div>
+                    
+                    <!-- SUCCESS MESSAGE OVERLAY (hidden by default) -->
+                    <div class="reservation-success-card" id="reservation-success-card" style="display: none;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="success-icon">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                            <polyline points="22 4 12 14.01 9 11.01"/>
+                        </svg>
+                        
+                        <h2 class="success-heading">Your Reservation is Confirmed</h2>
+                        
+                        <p class="success-text">Thank you for choosing Lumière. A confirmation has been sent to your email address. Our team will contact you within 30 minutes to personally confirm your booking. We look forward to welcoming you.</p>
+                        
+                        <div class="success-divider"></div>
+                        
+                        <div class="booking-summary" id="booking-summary">
+                            <div class="summary-row">
+                                <span class="summary-label">Name:</span>
+                                <span class="summary-value" id="summary-name"></span>
+                            </div>
+                            <div class="summary-row">
+                                <span class="summary-label">Date:</span>
+                                <span class="summary-value" id="summary-date"></span>
+                            </div>
+                            <div class="summary-row">
+                                <span class="summary-label">Time:</span>
+                                <span class="summary-value" id="summary-time"></span>
+                            </div>
+                            <div class="summary-row">
+                                <span class="summary-label">Guests:</span>
+                                <span class="summary-value" id="summary-guests"></span>
+                            </div>
+                            <div class="summary-row">
+                                <span class="summary-label">Occasion:</span>
+                                <span class="summary-value" id="summary-occasion"></span>
+                            </div>
+                        </div>
+                        
+                        <button type="button" class="btn btn-secondary" id="make-another-btn">Make Another Reservation</button>
+                    </div>
+                </div>
+                
+                <!-- RIGHT COLUMN — SUPPORTING INFO -->
+                <div class="reservation-info-column" id="reservation-info-column">
+                    
+                    <!-- Block 1: Opening Hours -->
+                    <div class="info-block" id="info-block-1">
+                        <h3 class="info-block-label">OPENING HOURS</h3>
+                        <div class="opening-hours">
+                            <div class="hours-row" data-day="monday">
+                                <span class="day-name">Monday</span>
+                                <span class="day-hours">Closed</span>
+                            </div>
+                            <div class="hours-row" data-day="tuesday">
+                                <span class="day-name">Tuesday</span>
+                                <span class="day-hours">Closed</span>
+                            </div>
+                            <div class="hours-row" data-day="wednesday">
+                                <span class="day-name">Wednesday</span>
+                                <span class="day-hours">6:00 PM — 11:00 PM</span>
+                            </div>
+                            <div class="hours-row" data-day="thursday">
+                                <span class="day-name">Thursday</span>
+                                <span class="day-hours">6:00 PM — 11:00 PM</span>
+                            </div>
+                            <div class="hours-row" data-day="friday">
+                                <span class="day-name">Friday</span>
+                                <span class="day-hours">5:30 PM — 11:30 PM</span>
+                            </div>
+                            <div class="hours-row" data-day="saturday">
+                                <span class="day-name">Saturday</span>
+                                <span class="day-hours">5:30 PM — 11:30 PM</span>
+                            </div>
+                            <div class="hours-row" data-day="sunday">
+                                <span class="day-name">Sunday</span>
+                                <span class="day-hours">6:00 PM — 10:30 PM</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Block 2: Location -->
+                    <div class="info-block" id="info-block-2">
+                        <h3 class="info-block-label">FIND US</h3>
+                        <address class="info-address">
+                            12 Mount Street<br>
+                            Mayfair, London<br>
+                            W1K 2TN<br>
+                            United Kingdom
+                        </address>
+                        <a href="https://maps.google.com/?q=12+Mount+Street+Mayfair+London+W1K+2TN" target="_blank" rel="noopener noreferrer" class="info-link">
+                            Get Directions
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                                <polyline points="15 3 21 3 21 9"/>
+                                <line x1="10" y1="14" x2="21" y2="3"/>
+                            </svg>
+                        </a>
+                    </div>
+                    
+                    <!-- Block 3: Contact -->
+                    <div class="info-block" id="info-block-3">
+                        <h3 class="info-block-label">CONTACT US</h3>
+                        <div class="contact-items">
+                            <a href="tel:+442070000000" class="contact-item">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="contact-icon">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                                </svg>
+                                <span>+44 20 7000 0000</span>
+                            </a>
+                            <a href="/cdn-cgi/l/email-protection#0b796e786e797d6a7f626465784b677e66626e796e256864257e60" class="contact-item">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="contact-icon">
+                                    <rect width="20" height="16" x="2" y="4" rx="2"/>
+                                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+                                </svg>
+                                <span><span class="__cf_email__" data-cfemail="f684938593848097829f999885b69a839b9f938493d89599d8839d">[email&#160;protected]</span></span>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Block 4: Good to Know -->
+                    <div class="info-block" id="info-block-4">
+                        <h3 class="info-block-label">GOOD TO KNOW</h3>
+                        <ul class="info-list">
+                            <li>Smart casual dress code observed</li>
+                            <li>24 hours notice required for cancellations</li>
+                            <li>Groups of 8 or more — please contact us directly</li>
+                        </ul>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- •••••••••••••••••••••••••••••••••••••••••••••••
+         SECTION 3 — RESERVATION POLICIES
+         Three columns: Cancellation, Dress Code, Groups
+         ••••••••••••••••••••••••••••••••••••••••••••••• -->
+    <section class="reservation-policies-section" id="reservation-policies-section">
+        <div class="container">
+            <div class="policies-grid" id="policies-grid">
+                
+                <!-- Column 1: Cancellation Policy -->
+                <div class="policy-column" id="policy-column-1">
+                    <div class="policy-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <rect width="18" height="18" x="3" y="4" rx="2" ry="2"/>
+                            <line x1="16" x2="16" y1="2" y2="6"/>
+                            <line x1="8" x2="8" y1="2" y2="6"/>
+                            <line x1="3" x2="21" y1="10" y2="10"/>
+                            <line x1="10" x2="14" y1="14" y2="18"/>
+                            <line x1="14" x2="10" y1="14" y2="18"/>
+                        </svg>
+                    </div>
+                    <h3 class="policy-heading">Cancellations</h3>
+                    <p class="policy-text">We kindly ask for a minimum of 24 hours notice for cancellations or amendments. For groups of six or more we require 48 hours notice. To cancel or amend a reservation please call us directly.</p>
+                </div>
+                
+                <!-- Column 2: Dress Code -->
+                <div class="policy-column" id="policy-column-2">
+                    <div class="policy-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M20.38 3.46 16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.47a2 2 0 0 0-1.34-2.23z"/>
+                        </svg>
+                    </div>
+                    <h3 class="policy-heading">Dress Code</h3>
+                    <p class="policy-text">We observe a smart casual dress code throughout the restaurant. We ask that guests refrain from sportswear, trainers and casual shorts. For private dining events formal dress is appreciated.</p>
+                </div>
+                
+                <!-- Column 3: Groups and Private Dining -->
+                <div class="policy-column" id="policy-column-3">
+                    <div class="policy-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                        </svg>
+                    </div>
+                    <h3 class="policy-heading">Groups and Private Dining</h3>
+                    <p class="policy-text">For parties of eight or more guests we ask that you contact us directly by telephone or email rather than using the online booking form. Our events team will be delighted to assist you.</p>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+
+    <!-- •••••••••••••••••••••••••••••••••••••••••••••••
+         SECTION 4 — PRIVATE DINING CTA
+         Split layout: content left, image breathes right
+         ••••••••••••••••••••••••••••••••••••••••••••••• -->
+    <section class="private-dining-cta-section" id="private-dining-cta"><div class="private-dining-bg" style="background-image: url('assets/images/interior/private-dining.webp')"></div>
+        <div class="private-dining-overlay"></div>
+        
+        <div class="container">
+            <div class="private-dining-layout">
+                <!-- Left Half: Content -->
+                <div class="private-dining-content">
+                    <div class="private-dining-ornament" id="private-dining-ornament">✦</div>
+                    <p class="private-dining-label" id="private-dining-label">PRIVATE DINING</p>
+                    <h2 class="private-dining-heading" id="private-dining-heading">Planning Something Special?</h2>
+                    <p class="private-dining-text" id="private-dining-text">For intimate celebrations, corporate dinners and exclusive events, our private dining room accommodates up to 20 guests. Our events team will work with you to create an experience tailored entirely to your occasion.</p>
+                    
+                    <div class="private-dining-buttons" id="private-dining-buttons">
+                        <a href="events.html" class="btn btn-primary">Enquire About Private Dining</a>
+                        <a href="tel:+442070000001" class="private-dining-phone-link">Or call our events team — +44 20 7000 0001</a>
+                    </div>
+                </div>
+                
+                <!-- Right Half: Empty (lets background breathe) -->
+                <div class="private-dining-spacer"></div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer Container - Loaded via JavaScript -->
+    <div id="footer-container"></div>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m18 15-6-6-6 6"/>
+        </svg>
+    </button>
+
+    <!-- GSAP + ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    
+    <!-- Flatpickr - Only on this page -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    
+    <!-- Lenis Smooth Scroll -->
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.42/bundled/lenis.min.js"></script>
+    
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Custom JS - Core -->
+    <script src="assets/js/core/component-loader.js"></script>
+    <script src="assets/js/core/cursor.js"></script>
+    <script src="assets/js/core/loader.js"></script>
+    <script src="assets/js/core/navbar.js"></script>
+    <script src="assets/js/core/smooth-scroll.js"></script>
+    
+    <!-- Custom JS - Components -->
+    <script src="assets/js/components/form-handler.js"></script>
+    <script src
+="assets/js/components/animations-init.js"></script>
+    
+    <!-- Custom JS - Pages -->
+    <script src="assets/js/pages/reservations.js"></script>
+    
+    <!-- Custom JS - Main -->
+    <script src="assets/js/main.js"></script>
+
+</body>
+</html>

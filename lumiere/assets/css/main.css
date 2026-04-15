@@ -1,0 +1,347 @@
+/* ================================================
+   LUMIÈRE - MAIN CSS
+   Foundation styles for the entire site
+   
+   🔧 BUYER GUIDE:
+   This is the MOST IMPORTANT CSS file to customize.
+   
+   🔧 WHAT'S IN THIS FILE:
+   1. CSS Variables (colors, fonts, spacing) - EDIT THESE
+   2. CSS Reset (removes browser defaults) - DON'T EDIT
+   3. Global Typography (heading styles) - RARELY EDIT
+   4. Container & Layout (page structure) - RARELY EDIT
+   5. Responsive Breakpoints (mobile/tablet/desktop) - RARELY EDIT
+   
+   🔧 TO CHANGE COLORS:
+   Edit the CSS variables in the :root section below (lines 10-50).
+   Change them once, and the entire site updates automatically!
+   
+   🔧 TO CHANGE FONTS:
+   1. Update Google Fonts link in ALL HTML files
+   2. Edit font variables in :root section below
+   
+   ⚠️ DON'T EDIT:
+   - CSS Reset section (lines 100-150)
+   - Global typography rules (lines 150-200)
+   - Responsive breakpoints (unless you know what you're doing)
+   ================================================ */
+
+/* ================================================
+   CSS VARIABLES
+   🔧 EDIT: Change these values to customize the entire site
+   
+   HOW CSS VARIABLES WORK:
+   1. Define once here: --accent-gold: #C9A84C;
+   2. Use everywhere: background: var(--accent-gold);
+   3. Change here, updates entire site automatically!
+   ================================================ */
+
+:root {
+    /* ============================================
+       BRAND COLORS
+       To change the color scheme, edit ONLY here.
+       Every color on the site updates automatically.
+       ============================================ */
+    
+    /* 🔧 EDIT: Primary background color */
+    --bg-primary: #0D0D0D;
+    
+    /* 🔧 EDIT: Card and surface background color */
+    --bg-surface: #1A1A18;
+    
+    /* 🔧 EDIT: Gold accent color for buttons and highlights */
+    --accent-gold: #C9A84C;
+    
+    /* 🔧 EDIT: Gold hover state color */
+    --accent-gold-hover: #E8C56A;
+    
+    /* 🔧 EDIT: Cream text color for special text */
+    --text-cream: #F5ECD7;
+    
+    /* 🔧 EDIT: Primary text color */
+    --text-primary: #F0EDE6;
+    
+    /* 🔧 EDIT: Muted text color for secondary content */
+    --text-muted: #9A9589;
+    
+    /* 🔧 EDIT: Border color for dividers and outlines */
+    --border: #2A2720;
+    
+    /* 🔧 EDIT: Overlay color for image overlays */
+    --overlay: rgba(0, 0, 0, 0.6);
+    
+    /* Alias variables for consistency across components */
+    --color-bg: var(--bg-primary);
+    --color-surface: var(--bg-surface);
+    --color-gold: var(--accent-gold);
+    --color-cream: var(--text-cream);
+    --color-muted: var(--text-muted);
+    
+    /* Spacing scale */
+    --spacing-2: 0.5rem;
+    --spacing-3: 0.75rem;
+    --spacing-4: 1rem;
+    --spacing-5: 1.25rem;
+    --spacing-6: 1.5rem;
+    --spacing-8: 2rem;
+    --spacing-10: 2.5rem;
+    --spacing-12: 3rem;
+    --spacing-16: 4rem;
+
+    /* ============================================
+       TYPOGRAPHY
+       To change fonts, update the Google Fonts link 
+       in each HTML file AND change these variables.
+       ============================================ */
+    
+    /* 🔧 EDIT: Primary heading font (elegant serif) */
+    --font-heading: 'Cormorant Garamond', serif;
+    
+    /* 🔧 EDIT: Secondary heading font (bold serif) */
+    --font-subheading: 'Playfair Display', serif;
+    
+    /* 🔧 EDIT: Body text font (clean sans-serif) */
+    --font-body: 'DM Sans', sans-serif;
+
+    /* ============================================
+       SPACING & LAYOUT - MOBILE FIRST
+       Base values for mobile, scale up for larger screens
+       ============================================ */
+    
+    /* 🔧 EDIT: Section padding top and bottom */
+    --section-padding: 50px;
+    
+    /* 🔧 EDIT: Maximum container width */
+    --container-width: 1280px;
+    
+    /* 🔧 EDIT: Border radius for cards and buttons */
+    --border-radius: 6px;
+    
+    /* 🔧 EDIT: Transition speed for hover effects */
+    --transition-speed: 0.3s;
+    
+    /* Grid gaps */
+    --gap-small: 20px;
+    --gap-large: 32px;
+    
+    /* Font sizes - Mobile first */
+    --font-size-hero: 36px;
+    --font-size-h1: 32px;
+    --font-size-h2: 28px;
+    --font-size-h3: 24px;
+    --font-size-h4: 20px;
+    --font-size-body: 16px;
+    --font-size-small: 14px;
+    
+    /* Line heights */
+    --line-height-heading: 1.2;
+    --line-height-body: 1.7;
+    
+    /* Letter spacing */
+    --letter-spacing-heading: 0.02em;
+    --letter-spacing-wide: 0.05em;
+}
+
+
+/* ================================================
+   CSS RESET
+   Removes browser default styles
+   ================================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    font-family: var(--font-body);
+    font-size: var(--font-size-body);
+    line-height: var(--line-height-body);
+    color: var(--text-primary);
+    background-color: var(--bg-primary);
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: all var(--transition-speed) ease;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+    border: none;
+    background: none;
+    transition: all var(--transition-speed) ease;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+input, textarea, select {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+}
+
+
+/* ================================================
+   GLOBAL TYPOGRAPHY
+   Base heading and text styles
+   ================================================ */
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: 400;
+    line-height: var(--line-height-heading);
+    letter-spacing: var(--letter-spacing-heading);
+    color: var(--text-cream);
+}
+
+h1 {
+    font-size: var(--font-size-h1);
+}
+
+h2 {
+    font-size: var(--font-size-h2);
+}
+
+h3 {
+    font-size: var(--font-size-h3);
+}
+
+h4 {
+    font-size: var(--font-size-h4);
+}
+
+p {
+    margin-bottom: 1.5rem;
+}
+
+/* Subheading style using secondary font */
+.subheading {
+    font-family: var(--font-subheading);
+}
+
+
+/* ================================================
+   CONTAINER & LAYOUT
+   Reusable container and section styles
+   ================================================ */
+
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+section {
+    padding: var(--section-padding) 0;
+    position: relative;
+}
+
+/* Section with background */
+.section-dark {
+    background-color: var(--bg-surface);
+}
+
+
+/* ================================================
+   SECTION HEADERS
+   Reusable section title and subtitle styles
+   ================================================ */
+
+.section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.section-subtitle {
+    font-family: var(--font-body);
+    font-size: var(--font-size-small);
+    font-weight: 500;
+    letter-spacing: var(--letter-spacing-wide);
+    text-transform: uppercase;
+    color: var(--accent-gold);
+    margin-bottom: 1rem;
+}
+
+.section-title {
+    font-size: var(--font-size-h2);
+    color: var(--text-cream);
+}
+
+.section-cta {
+    text-align: center;
+    margin-top: 4rem;
+}
+
+
+/* ================================================
+   SECTION DIVIDERS
+   Thin gold lines between sections
+   ================================================ */
+
+.section-divider {
+    width: 100%;
+    height: 1px;
+    background-color: var(--border);
+    margin: var(--section-padding) 0;
+}
+
+.section-divider-gold {
+    background: linear-gradient(90deg, transparent, var(--accent-gold), transparent);
+}
+
+
+/* ================================================
+   RESPONSIVE TYPOGRAPHY - MOBILE FIRST
+   Scale up font sizes and spacing for larger screens
+   ================================================ */
+
+/* Tablet and up */
+@media (min-width: 768px) {
+    :root {
+        --font-size-hero: 56px;
+        --font-size-h1: 48px;
+        --font-size-h2: 40px;
+        --font-size-h3: 32px;
+        --font-size-h4: 24px;
+        --font-size-body: 18px;
+        --font-size-small: 16px;
+        --section-padding: 80px;
+        --gap-small: 32px;
+        --gap-large: 48px;
+    }
+    
+    .container {
+        padding: 0 2rem;
+    }
+}
+
+/* Desktop and up */
+@media (min-width: 1024px) {
+    :root {
+        --font-size-hero: 96px;
+        --font-size-h1: 72px;
+        --font-size-h2: 56px;
+        --font-size-h3: 48px;
+        --font-size-h4: 32px;
+        --section-padding: 110px;
+    }
+}

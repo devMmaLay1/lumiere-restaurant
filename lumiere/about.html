@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Ÿ” EDIT: Update meta description for SEO -->
+    <meta name="description" content="Discover the story behind Lumière. From our philosophy of provenance-led cooking to the passionate team behind every dish — learn what makes Lumière one of London's most celebrated fine dining restaurants.">
+
+    <!-- Ÿ” EDIT: Update page title -->
+    <title>Lumière — Our Story | Fine Dining Mayfair</title>
+
+    <!-- Preload critical hero image -->
+    <link rel="preload" as="image" href="assets/images/hero/hero-about.webp">
+
+    <!-- Ÿ” EDIT: Replace with your preferred Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Playfair+Display:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- AOS — Scroll Reveal Animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/utilities.css">
+    <link rel="stylesheet" href="assets/css/pages/about.css">
+</head>
+<body>
+
+    <!-- Page Loader -->
+    <div id="page-loader">
+        <div class="loader-content">
+            <img src="assets/images/brand/logo.webp" alt="Lumière logo" class="loader-logo">
+            <div class="loader-bar"></div>
+        </div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor"></div>
+    <div class="custom-cursor-dot"></div>
+
+    <!-- Navbar Container — loaded via component-loader.js -->
+    <div id="navbar-container"></div>
+
+
+    <!-- •••••••••••••••••••••••••••••••••••••••••••••••
+         SECTION 1 — PAGE HERO
+         Full-width hero banner with breadcrumb and heading
+         Ÿ” EDIT: Update hero image and text below
+         ••••••••••••••••••••••••••••••••••••••••••••••• -->
+    <section class="about-hero" id="about-hero">
+        <!-- Ÿ” EDIT: Replace with your hero background image (recommended: 1920x800px) -->
+        <div class="about-hero-bg" style="background-image: url('assets/images/hero/hero-about.webp')"></div>
+        <div class="about-hero-overlay"></div>
+        <div class="about-hero-content">
+            <!-- Ÿ” EDIT: Update breadcrumb text -->
+            <p class="about-breadcrumb">Home → Our Story</p>
+            
+            <!-- Ÿ” EDIT: Update label -->
+            <p class="about-hero-label">OUR STORY</p>
+            
+            <!-- Ÿ” EDIT: Update main heading -->
+            <h1 class="about-hero-heading" id="about-hero-heading">The Art of the Table</h1>
+            
+            <!-- Ÿ” EDIT: Update subheading -->
+            <p class="about-hero-sub">Fine dining rooted in provenance, craft and a singular obsession with excellence.</p>
+            <div class="about-hero-line" id="about-hero-line"></div>
+        </div>
+    </section>
+
+
+    <!-- •••••••••••••••••••••••••••••••••••••••••••••••
+         SECTION 2 — ORIGIN STORY
+         Two-column: image left, text right
+         Ÿ” EDIT: Update image and story text below
+         ••••••••••••••••••••••••••••••••••••••••••••••• -->
+    <section class="about-section about-section-dark" id="about-origin">
+        <div class="about-split">
+            <!-- Ÿ” EDIT: Replace with your restaurant interior image -->
+            <div class="about-split-image" id="origin-image">
+                <!-- Ÿ” EDIT: Replace with your restaurant interior image -->
+                <img src="assets/images/interior/dining-room-01.webp" alt="Lumière dining room interior" loading="lazy">
+            </div>
+            <div class="about-split-divider"></div>
+            <div class="about-split-text">
+                <span class="about-ornament">✦</span>
+                <p class="about-label">ESTABLISHED 2019</p>
+                <!-- Ÿ” EDIT: Change the heading -->
+                <h2 class="about-heading">Born From a Single Belief</h2>
+                <!-- Ÿ” EDIT: Change the paragraphs -->
+                <p class="about-body">Lumière began not as a business plan but as a belief — that the finest ingredients, treated with absolute respect, need nothing more than skilled hands and a quiet kitchen to become something extraordinary. That belief has guided every decision we have made since opening our doors on Mount Street in the autumn of 2019.</p>
+                <p class="about-body">What started as twelve tables and a team of seven has grown into one of Mayfair's most intimate and admired dining rooms. We have never sought scale. We have always sought depth — in flavour, in craft, in the relationships we build with the farmers, fishermen and producers who make everything we do possible.</p>
+                <div class="about-rule"></div>
+                <!-- Ÿ” EDIT: Change the pull quote -->
+                <blockquote class="about-quote">"We have never sought scale. We have always sought depth."</blockquote>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- •••••••••••••••••••••••••••••••••••••••••••••••
+         SECTION 3 — HEADLINE STATISTICS
+         Four counters in a row, gold separators.
+         ••••••••••••••••••••••••••••••••••••••••••••••• -->
+    <section class="about-section about-section-surface" id="about-stats">
+        <div class="container">
+            <div class="about-stats-grid">
+                <!-- Ÿ” EDIT: Change the numbers, suffixes, and labels -->
+                <div class="about-stat">
+                    <span class="about-stat-number" data-count="5">0</span>
+                    <span class="about-stat-label">Years of Excellence</span>
+                </div>
+                <div class="about-stat-sep"></div>
+                <div class="about-stat">
+                    <span class="about-stat-number" data-count="2">0</span>
+                    <span class="about-stat-label">AA Rosettes Awarded</span>
+                </div>
+                <div class="about-stat-sep"></div>
+                <div class="about-stat">
+                    <span class="about-stat-number" data-count="98" data-suffix="%">0</span>
+                    <span class="about-stat-label">Guest Return Rate</span>
+                </div>
+                <div class="about-stat-sep"></div>
+                <div class="about-stat">
+                    <span class="about-stat-number" data-count="40" data-suffix="+">0</span>
+                    <span class="about-stat-label">Artisan Producers</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- •••••••••••••••••••••••••••••••••••••••••••••••
+         SECTION 4 — THE CHEF
+         Two-column REVERSED: text left, image right.
+         Gold border + sepia filter on portrait.
+         ••••••••••••••••••••••••••••••••••••••••••••••• -->
+    <section class="about-section about-section-dark" id="about-chef">
+        <div class="about-split about-split-reverse">
+            <div class="about-split-text">
+                <span class="about-ornament">✦</span>
+                <p class="about-label">EXECUTIVE CHEF</p>
+                <!-- Ÿ” EDIT: Change the chef name -->
+                <h2 class="about-heading">Thomas Renard</h2>
+                <p class="about-subtitle">Executive Chef &amp; Founder</p>
+                <div class="about-rule"></div>
+                <!-- Ÿ” EDIT: Change the chef bio paragraphs -->
+                <p class="about-body">Thomas Renard spent twelve years in some of Europe's most exacting kitchens before returning to London with a single ambition: to open the restaurant he had always wanted to eat in. Trained under two Michelin-starred chefs in Lyon and later in Copenhagen, his approach is shaped by classical French rigour softened by a deep respect for British seasonal produce.</p>
+                <p class="about-body">At Lumière, Thomas cooks the food he believes in rather than the food the industry expects of him. The menu changes with the seasons not as a marketing exercise but because he refuses to use an ingredient before it has reached its full potential. That discipline is what our guests return for.</p>
+                <p class="about-body">When he is not in the kitchen, Thomas is visiting the farms and fisheries that supply Lumière — relationships built over years of mutual respect and shared standards. He believes the dining room is simply the final stage of a much longer process that begins in the field.</p>
+                <!-- Ÿ” EDIT: Change accolade badges -->
+                <div class="about-accolades">
+                    <div class="about-accolade">
+                        <i data-lucide="award"></i>
+                        <span class="about-accolade-title">AA Rosette Award</span>
+                        <span class="about-accolade-year">2021</span>
+                    </div>
+                    <div class="about-accolade">
+                        <i data-lucide="star"></i>
+                        <span class="about-accolade-title">Square Meal Top 100</span>
+                        <span class="about-accolade-year">2023</span>
+                    </div>
+                    <div class="about-accolade">
+                        <i data-lucide="trophy"></i>
+                        <span class="about-accolade-title">London Food Awards</span>
+                        <span class="about-accolade-year">2024</span>
+                    </div>
+                </div>
+            </div>
+            <div class="about-split-image about-chef-portrait" id="chef-image">
+                <!-- Ÿ” EDIT: Replace with your chef portrait image -->
+                <img src="assets/images/team/chef-portrait.webp" alt="Chef Thomas Renard" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+
+    <!-- •••••••••••••••••••••••••••••••••••••••••••••••
+         SECTION 5 — OUR PHILOSOPHY
+         Centered heading + three pillar grid + quote.
+         Editorial quality, no images.
+         ••••••••••••••••••••••••••••••••••••••••••••••• -->
+    <section class="about-section about-section-surface" id="about-philosophy">
+        <div class="container">
+            <div class="about-center-heading">
+                <span class="about-ornament">✦</span>
+                <p class="about-label">OUR PHILOSOPHY</p>
+                <!-- Ÿ” EDIT: Change the philosophy heading -->
+                <h2 class="about-heading about-heading-center">What We Believe</h2>
+                <div class="about-rule about-rule-center"></div>
+            </div>
+
+            <!-- Ÿ” EDIT: Change the three philosophy pillars -->
+            <div class="about-pillars">
+                <div class="about-pillar">
+                    <i data-lucide="map-pin" class="about-pillar-icon"></i>
+                    <h3 class="about-pillar-title">Provenance Above All</h3>
+                    <p class="about-pillar-text">Every ingredient on our menu has a name, a place and a story. We source exclusively from British and European artisan producers whose values mirror our own. Knowing where food comes from is not a trend for us — it is the foundation of everything we cook.</p>
+                </div>
+                <div class="about-pillar-sep"></div>
+                <div class="about-pillar">
+                    <i data-lucide="leaf" class="about-pillar-icon"></i>
+                    <h3 class="about-pillar-title">In Season, Always</h3>
+                    <p class="about-pillar-text">Our menu exists in a state of constant renewal. We do not serve strawberries in January or asparagus in October. We follow the calendar of the land and the sea, and we believe that constraint is the mother of creativity in the kitchen.</p>
+                </div>
+                <div class="about-pillar-sep"></div>
+                <div class="about-pillar">
+                    <i data-lucide="sparkles" class="about-pillar-icon"></i>
+                    <h3 class="about-pillar-title">The Discipline of Less</h3>
+                    <p class="about-pillar-text">Fine dining is not about complexity for its own sake. At Lumière we believe in removing everything that does not serve the ingredient. The best dish is the one where every element belongs — and not one element more.</p>
+                </div>
+            </div>
+
+            <!-- Ÿ” EDIT: Change the pull quote -->
+            <blockquote class="about-quote about-quote-full">
+                <p>"The finest cooking is not about what you add. It is about what you have the confidence to leave out."</p>
+                <cite>— Thomas Renard, Executive Chef</cite>
+            </blockquote>
+        </div>
+    </section>
+
+
+    <!-- •••••••••••••••••••••••••••••••••••••••••••••••
+         SECTION 6 — PROVENANCE & SUPPLIERS
+         Two-column: image left, text + supplier list right.
+         ••••••••••••••••••••••••••••••••••••••••••••••• -->
+    <section class="about-section about-section-dark" id="about-provenance">
+        <div class="about-split">
+            <div class="about-split-image" id="provenance-image">
+                <!-- Ÿ” EDIT: Replace with your provenance / farm image -->
+                <img src="assets/images/gallery/farmland.webp" alt="British farmland supplier" loading="lazy">
+            </div>
+            <div class="about-split-divider"></div>
+            <div class="about-split-text">
+                <span class="about-ornament">✦</span>
+                <p class="about-label">OUR PRODUCERS</p>
+                <h2 class="about-heading">Sourced With Purpose</h2>
+                <p class="about-body">Every producer on our supplier list was chosen after a visit — not a phone call, not a brochure, not a sales pitch. Thomas or a senior member of the kitchen team has stood on the land, seen the animals, tasted the produce and looked the grower in the eye. That is the standard we hold ourselves to.</p>
+                <p class="about-body">We publish our producers openly because we believe transparency in sourcing is part of the hospitality we offer. When you ask your server where the beef is from, they will tell you the farm, the county and the farmer's name.</p>
+
+                <!-- Ÿ” EDIT: Add, remove, or modify suppliers -->
+                <ul class="about-suppliers">
+                    <li class="about-supplier-row">
+                        <span class="about-supplier-name">Swaledale Foods</span>
+                        <span class="about-supplier-type">Rare breed beef — North Yorkshire</span>
+                    </li>
+                    <li class="about-supplier-row">
+                        <span class="about-supplier-name">Brixham Day Boats</span>
+                        <span class="about-supplier-type">Day-caught fish — Devon Coast</span>
+                    </li>
+                    <li class="about-supplier-row">
+                        <span class="about-supplier-name">Natoora</span>
+                        <span class="about-supplier-type">Heritage vegetables — London &amp; Italy</span>
+                    </li>
+                    <li class="about-supplier-row">
+                        <span class="about-supplier-name">Ampersand Farm</span>
+                        <span class="about-supplier-type">Free range eggs &amp; poultry — Suffolk</span>
+                    </li>
+                    <li class="about-supplier-row">
+                        <span class="about-supplier-name">Neal's Yard Dairy</span>
+                        <span class="about-supplier-type">Artisan British cheese — Borough Market</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- •••••••••••••••••••••••••••••••••••••••••••••••
+         SECTION 7 — THE KITCHEN
+         Full-bleed atmospheric section. Background
+         image with dark overlay. Minimal text.
+         ••••••••••••••••••••••••••••••••••••••••••••••• -->
+    <section class="about-section about-kitchen" id="about-kitchen">
+        <!-- Ÿ” EDIT: Replace with your kitchen action image -->
+        <div class="about-kitchen-bg" style="background-image: url('assets/images/gallery/kitchen-brigade.webp')"></div>
+        <div class="about-kitchen-overlay"></div>
+        <div class="about-kitchen-content">
+            <p class="about-label">IN THE KITCHEN</p>
+            <h2 class="about-heading about-heading-center">Where the Work Happens</h2>
+            <p class="about-kitchen-line">Every plate that leaves our kitchen has passed through hands that care about it.</p>
+            <div class="about-hero-line"></div>
+        </div>
+    </section>
+
+
+    <!-- •••••••••••••••••••••••••••••••••••••••••••••••
+         SECTION 8 — THE TEAM
+         Four team cards with circular portraits.
+         ••••••••••••••••••••••••••••••••••••••••••••••• -->
+    <section class="about-section about-section-dark" id="about-team">
+        <div class="container">
+            <div class="about-center-heading">
+                <span class="about-ornament">✦</span>
+                <p class="about-label">THE TEAM</p>
+                <h2 class="about-heading about-heading-center">The People Behind the Experience</h2>
+                <p class="about-center-line">From the kitchen pass to the dining room floor — every member of our team shares the same standard.</p>
+            </div>
+
+            <!-- Ÿ” EDIT: Change team members, images, roles, and bios -->
+            <div class="about-team-grid">
+                <div class="about-team-card">
+                    <div class="about-team-portrait">
+                        <img src="assets/images/team/chef-portrait.webp" alt="Thomas Renard" loading="lazy">
+                    </div>
+                    <h3 class="about-team-name">Thomas Renard</h3>
+                    <p class="about-team-role">EXECUTIVE CHEF &amp; FOUNDER</p>
+                    <p class="about-team-bio">Twenty years in fine dining kitchens across France, Denmark and the United Kingdom.</p>
+                </div>
+                <div class="about-team-card">
+                    <div class="about-team-portrait">
+                        <img src="assets/images/team/pastry-chef.webp" alt="Sophie Aldridge" loading="lazy">
+                    </div>
+                    <h3 class="about-team-name">Sophie Aldridge</h3>
+                    <p class="about-team-role">HEAD PASTRY CHEF</p>
+                    <p class="about-team-bio">Former sous chef at a two Michelin-starred restaurant in Edinburgh. Specialises in French classical patisserie.</p>
+                </div>
+                <div class="about-team-card">
+                    <div class="about-team-portrait">
+                        <img src="assets/images/team/manager.webp" alt="James Whitfield" loading="lazy">
+                    </div>
+                    <h3 class="about-team-name">James Whitfield</h3>
+                    <p class="about-team-role">RESTAURANT MANAGER</p>
+                    <p class="about-team-bio">Fifteen years front of house experience across London's most respected dining rooms.</p>
+                </div>
+                <div class="about-team-card">
+                    <div class="about-team-portrait">
+                        <img src="assets/images/team/sommelier.webp" alt="Amara Diallo" loading="lazy">
+                    </div>
+                    <h3 class="about-team-name">Amara Diallo</h3>
+                    <p class="about-team-role">HEAD SOMMELIER</p>
+                    <p class="about-team-bio">WSET Diploma holder. Curates our wine list with a focus on small growers and low-intervention producers.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- •••••••••••••••••••••••••••••••••••••••••••••••
+         SECTION 9 — ACCOLADES & PRESS
+         Award badges + press quote cards.
+         ••••••••••••••••••••••••••••••••••••••••••••••• -->
+    <section class="about-section about-section-surface" id="about-accolades">
+        <div class="container">
+            <div class="about-center-heading">
+                <span class="about-ornament">✦</span>
+                <p class="about-label">RECOGNITION</p>
+                <h2 class="about-heading about-heading-center">Accolades &amp; Press</h2>
+            </div>
+
+            <!-- Ÿ” EDIT: Change award badges -->
+            <div class="about-awards-grid">
+                <div class="about-award-badge">
+                    <i data-lucide="award"></i>
+                    <span class="about-award-title">AA Two Rosettes</span>
+                    <span class="about-award-year">2022</span>
+                </div>
+                <div class="about-award-badge">
+                    <i data-lucide="star"></i>
+                    <span class="about-award-title">Square Meal Top 100</span>
+                    <span class="about-award-year">2023</span>
+                </div>
+                <div class="about-award-badge">
+                    <i data-lucide="trophy"></i>
+                    <span class="about-award-title">London Restaurant Awards</span>
+                    <span class="about-award-year">2024</span>
+                </div>
+                <div class="about-award-badge">
+                    <i data-lucide="book-open"></i>
+                    <span class="about-award-title">Harden's London Guide</span>
+                    <span class="about-award-year">2024</span>
+                </div>
+                <div class="about-award-badge">
+                    <i data-lucide="thumbs-up"></i>
+                    <span class="about-award-title">Travellers' Choice</span>
+                    <span class="about-award-year">2024</span>
+                </div>
+            </div>
+
+            <!-- Ÿ” EDIT: Change press quotes -->
+            <div class="about-press-grid">
+                <blockquote class="about-press-card">
+                    <span class="about-press-mark">"</span>
+                    <p class="about-press-text">One of the most quietly confident restaurants in London. The cooking speaks for itself.</p>
+                    <cite class="about-press-pub">— The Guardian</cite>
+                </blockquote>
+                <blockquote class="about-press-card">
+                    <span class="about-press-mark">"</span>
+                    <p class="about-press-text">Lumière is proof that restraint in the kitchen, when paired with truly exceptional produce, is the most exciting thing happening in Mayfair dining.</p>
+                    <cite class="about-press-pub">— Evening Standard</cite>
+                </blockquote>
+                <blockquote class="about-press-card">
+                    <span class="about-press-mark">"</span>
+                    <p class="about-press-text">The kind of restaurant you want to keep to yourself. Intimate, precise and deeply pleasurable.</p>
+                    <cite class="about-press-pub">— Square Meal</cite>
+                </blockquote>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- •••••••••••••••••••••••••••••••••••••••••••••••
+         SECTION 10 — FREQUENTLY ASKED QUESTIONS
+         FAQ accordion section with common guest questions
+         ••••••••••••••••••••••••••••••••••••••••••••••• -->
+    <section class="about-section about-section-surface" id="about-faq">
+        <div class="container">
+            <div class="about-center-heading">
+                <span class="about-ornament">✦</span>
+                <p class="about-label">FREQUENTLY ASKED QUESTIONS</p>
+                <h2 class="about-heading about-heading-center">Answers to the questions we hear most often from our guests</h2>
+                <div class="about-rule about-rule-center"></div>
+            </div>
+
+            <div class="about-faq-list">
+                <div class="about-faq-item">
+                    <button class="about-faq-question" aria-expanded="false">
+                        <span>Do you accommodate dietary requirements and allergies?</span>
+                        <i data-lucide="chevron-down" class="about-faq-icon"></i>
+                    </button>
+                    <div class="about-faq-answer">
+                        <p>Absolutely. We take dietary requirements and allergies very seriously. Please inform us of any restrictions when making your reservation, and our kitchen team will work with you to create a menu that meets your needs without compromising on quality or experience. We regularly accommodate vegetarian, vegan, gluten-free, and other dietary preferences.</p>
+                    </div>
+                </div>
+
+                <div class="about-faq-item">
+                    <button class="about-faq-question" aria-expanded="false">
+                        <span>What is your dress code?</span>
+                        <i data-lucide="chevron-down" class="about-faq-icon"></i>
+                    </button>
+                    <div class="about-faq-answer">
+                        <p>We operate a smart casual dress code. While we don't require formal attire, we ask that guests dress respectfully for the occasion. Jackets are not mandatory, but many of our guests choose to wear them. We kindly request no sportswear, shorts, or flip-flops.</p>
+                    </div>
+                </div>
+
+                <div class="about-faq-item">
+                    <button class="about-faq-question" aria-expanded="false">
+                        <span>How far in advance should I book?</span>
+                        <i data-lucide="chevron-down" class="about-faq-icon"></i>
+                    </button>
+                    <div class="about-faq-answer">
+                        <p>We recommend booking at least 2-3 weeks in advance, particularly for Friday and Saturday evenings. For special occasions or larger parties, booking 4-6 weeks ahead is advisable. We do occasionally have last-minute availability, so it's always worth checking our reservations page or calling us directly.</p>
+                    </div>
+                </div>
+
+                <div class="about-faq-item">
+                    <button class="about-faq-question" aria-expanded="false">
+                        <span>Do you offer private dining or event spaces?</span>
+                        <i data-lucide="chevron-down" class="about-faq-icon"></i>
+                    </button>
+                    <div class="about-faq-answer">
+                        <p>Yes. We have a private dining room that seats up to 14 guests, perfect for intimate celebrations, business dinners, or special occasions. We can also arrange exclusive use of the entire restaurant for larger events. Please contact our events team to discuss your requirements.</p>
+                    </div>
+                </div>
+
+                <div class="about-faq-item">
+                    <button class="about-faq-question" aria-expanded="false">
+                        <span>Is there a children's menu available?</span>
+                        <i data-lucide="chevron-down" class="about-faq-icon"></i>
+                    </button>
+                    <div class="about-faq-answer">
+                        <p>We welcome guests of all ages. While we don't have a separate children's menu, our kitchen is happy to prepare simplified dishes or smaller portions from our main menu. Please let us know when booking if you'll be dining with children, and we'll ensure they have an enjoyable experience.</p>
+                    </div>
+                </div>
+
+                <div class="about-faq-item">
+                    <button class="about-faq-question" aria-expanded="false">
+                        <span>What is your cancellation policy?</span>
+                        <i data-lucide="chevron-down" class="about-faq-icon"></i>
+                    </button>
+                    <div class="about-faq-answer">
+                        <p>We require at least 48 hours' notice for cancellations or changes to your reservation. Cancellations made with less than 48 hours' notice may incur a charge of £50 per person. For no-shows, the full tasting menu price will be charged. We understand that circumstances change, so please contact us as soon as possible if you need to modify your booking.</p>
+                    </div>
+                </div>
+
+                <div class="about-faq-item">
+                    <button class="about-faq-question" aria-expanded="false">
+                        <span>Do you have parking available?</span>
+                        <i data-lucide="chevron-down" class="about-faq-icon"></i>
+                    </button>
+                    <div class="about-faq-answer">
+                        <p>We don't have our own car park, but there are several public parking options nearby including the Mount Street car park (5-minute walk) and the Park Lane NCP. We're also easily accessible via public transport — Green Park and Bond Street stations are both within walking distance.</p>
+                    </div>
+                </div>
+
+                <div class="about-faq-item">
+                    <button class="about-faq-question" aria-expanded="false">
+                        <span>Can I bring my own wine?</span>
+                        <i data-lucide="chevron-down" class="about-faq-icon"></i>
+                    </button>
+                    <div class="about-faq-answer">
+                        <p>We do allow guests to bring their own wine with advance notice, subject to a corkage fee of £40 per bottle. However, we're proud of our carefully curated wine list and would encourage you to explore it with our sommelier, who can recommend pairings to complement your meal perfectly.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- •••••••••••••••••••••••••••••••••••••••••••••••
+         SECTION 11 — THE DINING ROOM
+         Full-bleed atmospheric closing section.
+         Team in set dining room before service.
+         ••••••••••••••••••••••••••••••••••••••••••••••• -->
+    <section class="about-section about-dining" id="about-dining">
+        <!-- Ÿ” EDIT: Replace with your dining room image -->
+        <div class="about-dining-bg" style="background-image: url('assets/images/gallery/candlelit-table.webp')"></div>
+        <div class="about-dining-overlay"></div>
+        <div class="about-dining-content">
+            <p class="about-label">THE DINING ROOM</p>
+            <h2 class="about-heading about-heading-center">Ready When You Are.</h2>
+            <p class="about-dining-line">An experience designed around you, from the moment you arrive to the moment you leave.</p>
+            <p class="about-dining-line">We look forward to welcoming you to Lumière.</p>
+        </div>
+    </section>
+
+
+    <!-- •••••••••••••••••••••••••••••••••••••••••••••••
+         RESERVATION CTA — loaded via component loader
+         ••••••••••••••••••••••••••••••••••••••••••••••• -->
+    <div id="reservation-cta-container"></div>
+
+
+    <!-- Footer Container — loaded via component-loader.js -->
+    <div id="footer-container"></div>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m18 15-6-6-6 6"/>
+        </svg>
+    </button>
+
+
+    <!-- GSAP + ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <!-- CountUp.js v2 -->
+    <script src="https://cdn.jsdelivr.net/npm/countup.js@2.8.0/dist/countUp.umd.js"></script>
+
+    <!-- Lenis Smooth Scroll -->
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.42/bundled/lenis.min.js"></script>
+
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Custom JS — Core -->
+    <script src="assets/js/core/component-loader.js"></script>
+    <script src="assets/js/core/cursor.js"></script>
+    <script src="assets/js/core/loader.js"></script>
+    <script src="assets/js/core/navbar.js"></script>
+    <script src="assets/js/core/smooth-scroll.js"></script>
+
+    <!-- Custom JS — Components -->
+    <script src="assets/js/components/counter.js"></script>
+    <script src="assets/js/components/animations-init.js"></script>
+
+    <!-- Custom JS — Page -->
+    <script src="assets/js/pages/about.js"></script>
+
+    <!-- Custom JS — Main -->
+    <script src="assets/js/main.js"></script>
+
+    <!-- Initialize Lucide Icons -->
+    <script>lucide.createIcons();</script>
+</body>
+</html>

@@ -1,0 +1,669 @@
+/* ================================================
+   LUMIÈRE - ANIMATIONS CSS
+   All transitions, keyframes, and animation styles
+   
+   🔧 BUYER GUIDE:
+   This file contains all animation and transition styles:
+   - Custom cursor (gold dot that follows mouse)
+   - Page loader (loading screen on page load)
+   - Hover effects (buttons, cards, images)
+   - Keyframe animations (fade-in, slide-up, etc.)
+   
+   🔧 TO CUSTOMIZE:
+   - Cursor color: Edit --accent-gold in main.css
+   - Hover effects: Edit transition speeds below
+   - Disable cursor: Delete cursor HTML elements from pages
+   - Disable loader: Delete loader HTML elements from pages
+   
+   You typically DON'T need to edit this file.
+   Most animation timing is controlled in JavaScript files.
+   ================================================ */
+
+
+/* ================================================
+   CUSTOM CURSOR
+   Gold dot cursor for desktop only
+   
+   🔧 TO DISABLE:
+   Delete these elements from your HTML pages:
+   <div class="custom-cursor"></div>
+   <div class="custom-cursor-dot"></div>
+   ================================================ */
+
+/* Hidden by default on mobile */
+.custom-cursor,
+.custom-cursor-dot {
+    display: none;
+}
+
+/* Show on desktop */
+@media (min-width: 1024px) {
+    .custom-cursor {
+        display: block;
+        width: 40px;
+        height: 40px;
+        border: 2px solid var(--accent-gold);
+        border-radius: 50%;
+        position: fixed;
+        pointer-events: none;
+        z-index: 9999;
+        transition: all 0.15s ease;
+        opacity: 0;
+    }
+
+    .custom-cursor-dot {
+        display: block;
+        width: 8px;
+        height: 8px;
+        background: var(--accent-gold);
+        border-radius: 50%;
+        position: fixed;
+        pointer-events: none;
+        z-index: 9999;
+        transition: all 0.1s ease;
+        opacity: 0;
+    }
+
+    /* Cursor hover state - grows larger */
+    .custom-cursor.hover {
+        width: 60px;
+        height: 60px;
+        background: rgba(201, 168, 76, 0.1);
+    }
+}
+
+
+/* ================================================
+   PAGE LOADER
+   Loading animation on page load
+   ================================================ */
+
+#page-loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: var(--bg-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+#page-loader.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loader-content {
+    text-align: center;
+}
+
+.loader-logo {
+    max-width: 200px;
+    margin-bottom: 2rem;
+    opacity: 0;
+    animation: fadeInLogo 1s ease forwards;
+}
+
+.loader-bar {
+    width: 200px;
+    height: 2px;
+    background: var(--border);
+    position: relative;
+    overflow: hidden;
+}
+
+.loader-bar::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--accent-gold);
+    transform: translateX(-100%);
+    animation: loadingBar 1.5s ease forwards;
+}
+
+@keyframes fadeInLogo {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes loadingBar {
+    to {
+        transform: translateX(0);
+    }
+}
+
+
+/* ================================================
+   SCROLL REVEAL ANIMATIONS
+   AOS library overrides and custom animations
+   ================================================ */
+
+/* Fade up animation */
+[data-aos="fade-up"] {
+    transform: translateY(50px);
+    opacity: 0;
+    transition: all 0.8s ease;
+}
+
+[data-aos="fade-up"].aos-animate {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Fade down animation */
+[data-aos="fade-down"] {
+    transform: translateY(-50px);
+    opacity: 0;
+    transition: all 0.8s ease;
+}
+
+[data-aos="fade-down"].aos-animate {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Fade left animation */
+[data-aos="fade-left"] {
+    transform: translateX(50px);
+    opacity: 0;
+    transition: all 0.8s ease;
+}
+
+[data-aos="fade-left"].aos-animate {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+/* Fade right animation */
+[data-aos="fade-right"] {
+    transform: translateX(-50px);
+    opacity: 0;
+    transition: all 0.8s ease;
+}
+
+[data-aos="fade-right"].aos-animate {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+/* Zoom in animation */
+[data-aos="zoom-in"] {
+    transform: scale(0.9);
+    opacity: 0;
+    transition: all 0.8s ease;
+}
+
+[data-aos="zoom-in"].aos-animate {
+    transform: scale(1);
+    opacity: 1;
+}
+
+/* Zoom out animation */
+[data-aos="zoom-out"] {
+    transform: scale(1.1);
+    opacity: 0;
+    transition: all 0.8s ease;
+}
+
+[data-aos="zoom-out"].aos-animate {
+    transform: scale(1);
+    opacity: 1;
+}
+
+
+/* ================================================
+   HERO ANIMATIONS
+   Hero section specific animations - Mobile first
+   ================================================ */
+
+.hero-section {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Parallax effect on hero background - disabled on mobile */
+.hero-bg.parallax {
+    transform: translateY(0);
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.7));
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 900px;
+    padding: 0 1.5rem;
+}
+
+.hero-subtitle {
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: var(--letter-spacing-wide);
+    text-transform: uppercase;
+    color: var(--accent-gold);
+    margin-bottom: 1rem;
+}
+
+.hero-title {
+    font-size: var(--font-size-hero);
+    color: var(--text-cream);
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+}
+
+.hero-description {
+    font-size: 1rem;
+    color: var(--text-primary);
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+}
+
+/* Scroll indicator - hidden on mobile */
+.scroll-indicator {
+    display: none;
+}
+
+.scroll-indicator span {
+    display: block;
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.scroll-line {
+    width: 2px;
+    height: 50px;
+    background: var(--border);
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.scroll-line::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    background: var(--accent-gold);
+    animation: scrollDown 2s ease-in-out infinite;
+}
+
+@keyframes scrollDown {
+    0% {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+}
+
+/* Tablet and up */
+@media (min-width: 768px) {
+    .hero-subtitle {
+        font-size: var(--font-size-small);
+    }
+    
+    .hero-description {
+        font-size: 1.125rem;
+        margin-bottom: 2.5rem;
+    }
+    
+    .hero-buttons {
+        flex-direction: row;
+        gap: 1.5rem;
+    }
+    
+    .hero-content {
+        padding: 0 2rem;
+    }
+}
+
+/* Desktop and up */
+@media (min-width: 1024px) {
+    .hero-description {
+        font-size: 1.25rem;
+    }
+    
+    /* Enable parallax on desktop */
+    .hero-bg.parallax {
+        transition: transform 0.5s ease-out;
+    }
+    
+    /* Show scroll indicator on desktop */
+    .scroll-indicator {
+        display: block;
+        position: absolute;
+        bottom: 3rem;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        z-index: 2;
+    }
+}
+
+
+/* ================================================
+   IMAGE HOVER EFFECTS
+   Overlay and zoom effects on images
+   ================================================ */
+
+.image-hover-wrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--border-radius);
+}
+
+.image-hover-wrapper img {
+    transition: transform 0.6s ease;
+}
+
+.image-hover-wrapper:hover img {
+    transform: scale(1.1);
+}
+
+.image-hover-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--overlay);
+    opacity: 0;
+    transition: opacity var(--transition-speed) ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-hover-wrapper:hover .image-hover-overlay {
+    opacity: 1;
+}
+
+
+/* ================================================
+   TEXT ANIMATIONS
+   Letter by letter and word animations
+   ================================================ */
+
+/* Split text animation - used with GSAP */
+.split-text {
+    overflow: hidden;
+}
+
+.split-text .char {
+    display: inline-block;
+    transform: translateY(100%);
+    opacity: 0;
+}
+
+.split-text.animated .char {
+    animation: charFadeIn 0.6s ease forwards;
+}
+
+@keyframes charFadeIn {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+/* ================================================
+   LOADING STATES
+   Skeleton loaders and loading animations
+   ================================================ */
+
+.skeleton {
+    background: linear-gradient(
+        90deg,
+        var(--bg-surface) 0%,
+        rgba(255, 255, 255, 0.05) 50%,
+        var(--bg-surface) 100%
+    );
+    background-size: 200% 100%;
+    animation: skeleton-loading 1.5s ease-in-out infinite;
+}
+
+@keyframes skeleton-loading {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+
+/* ================================================
+   PULSE ANIMATION
+   Subtle pulse effect for attention
+   ================================================ */
+
+.pulse {
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.7;
+    }
+}
+
+
+/* ================================================
+   FADE IN ANIMATION
+   Simple fade in effect
+   ================================================ */
+
+.fade-in {
+    animation: fadeIn 0.8s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* ================================================
+   SLIDE IN ANIMATIONS
+   Slide in from different directions
+   ================================================ */
+
+.slide-in-left {
+    animation: slideInLeft 0.8s ease forwards;
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.slide-in-right {
+    animation: slideInRight 0.8s ease forwards;
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+/* ================================================
+   FLOATING ANIMATION
+   Subtle floating effect
+   ================================================ */
+
+.floating {
+    animation: floating 3s ease-in-out infinite;
+}
+
+@keyframes floating {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+
+/* ================================================
+   STAGGER ANIMATION
+   Delay for staggered animations
+   ================================================ */
+
+.stagger-1 { animation-delay: 0.1s; }
+.stagger-2 { animation-delay: 0.2s; }
+.stagger-3 { animation-delay: 0.3s; }
+.stagger-4 { animation-delay: 0.4s; }
+.stagger-5 { animation-delay: 0.5s; }
+.stagger-6 { animation-delay: 0.6s; }
+
+
+/* ================================================
+   TRANSITION UTILITIES
+   Reusable transition classes
+   ================================================ */
+
+.transition-all {
+    transition: all var(--transition-speed) ease;
+}
+
+.transition-fast {
+    transition: all 0.15s ease;
+}
+
+.transition-slow {
+    transition: all 0.6s ease;
+}
+
+
+/* ================================================
+   HOVER EFFECTS
+   Reusable hover state effects
+   ================================================ */
+
+.hover-lift {
+    transition: transform var(--transition-speed) ease;
+}
+
+.hover-lift:hover {
+    transform: translateY(-5px);
+}
+
+.hover-scale {
+    transition: transform var(--transition-speed) ease;
+}
+
+.hover-scale:hover {
+    transform: scale(1.05);
+}
+
+.hover-gold {
+    transition: color var(--transition-speed) ease;
+}
+
+.hover-gold:hover {
+    color: var(--accent-gold);
+}
+
+
+/* ================================================
+   RESPONSIVE ANIMATIONS - MOBILE FIRST
+   Enhanced animations for larger screens
+   ================================================ */
+
+/* Tablet and up - Enable more animations */
+@media (min-width: 768px) {
+    /* Floating animation enabled */
+    .floating {
+        animation: floating 3s ease-in-out infinite;
+    }
+}
+
+/* Desktop and up - Full animation suite */
+@media (min-width: 1024px) {
+    /* Enable parallax on desktop */
+    .hero-bg.parallax {
+        transform: translateY(0);
+        transition: transform 0.5s ease-out;
+    }
+}
+
+/* Respect user's motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}

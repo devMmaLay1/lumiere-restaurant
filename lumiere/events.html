@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- ═══════════════════════════════════════════════
+         META TAGS AND PAGE INFO
+         ═══════════════════════════════════════════════ -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Host your private event at Lumière. Intimate celebrations, corporate dinners and exclusive tasting evenings in the heart of Mayfair. Enquire with our events team today.">
+    
+    <!-- Page Title -->
+    <title>Lumière — Private Events & Dining | Fine Dining Restaurant</title>
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Lumière — Private Events & Dining">
+    <meta property="og:description" content="Host your private event at Lumière. Intimate celebrations, corporate dinners and exclusive tasting evenings in the heart of Mayfair.">
+    <meta property="og:image" content="assets/images/hero/hero-events.webp">
+    <meta property="og:url" content="https://lumiere-restaurant.co.uk/events.html">
+    <meta property="og:type" content="website">
+    
+    <!-- ═══════════════════════════════════════════════
+         FONTS
+         ═══════════════════════════════════════════════ -->
+    <!-- Google Fonts: Cormorant Garamond (headings) and DM Sans (body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Playfair+Display:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- ═══════════════════════════════════════════════
+         EXTERNAL LIBRARIES CSS
+         ═══════════════════════════════════════════════ -->
+    <!-- Flatpickr CSS - For date picker in enquiry form -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    
+    <!-- AOS - Animate On Scroll -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- ═══════════════════════════════════════════════
+         CUSTOM CSS FILES
+         Load order: main → components → animations → utilities → page-specific
+         ═══════════════════════════════════════════════ -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/utilities.css">
+    <link rel="stylesheet" href="assets/css/pages/events.css">
+</head>
+<body>
+
+    <!-- ═══════════════════════════════════════════════
+         PAGE LOADER
+         Animated logo and progress bar shown during page load
+         ═══════════════════════════════════════════════ -->
+    <div id="page-loader">
+        <div class="loader-content">
+            <img src="assets/images/brand/logo.webp" alt="Lumière logo" class="loader-logo">
+            <div class="loader-bar"></div>
+        </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════
+         CUSTOM CURSOR
+         Luxury cursor effect for desktop users
+         ═══════════════════════════════════════════════ -->
+    <div class="custom-cursor"></div>
+    <div class="custom-cursor-dot"></div>
+
+    <!-- ═══════════════════════════════════════════════
+         NAVBAR
+         Loads dynamically via component-loader.js
+         ═══════════════════════════════════════════════ -->
+    <div id="navbar-container"></div>
+
+
+    <!-- ═══════════════════════════════════════════════
+         SECTION 1 — PAGE HERO
+         Height: 55-60vh (shorter than standard)
+         Background: Private dining room with candelabras
+         Overlay: 68% opacity (heavier for readability)
+         ═══════════════════════════════════════════════ -->
+    <section class="events-hero" id="events-hero">
+        <!-- Hero Background Image -->
+        <div class="events-hero-bg" style="background-image: url('assets/images/hero/hero-events.webp')"></div>
+        
+        <!-- Dark Overlay - 68% opacity -->
+        <div class="events-hero-overlay"></div>
+        
+        <!-- Hero Content - Centered -->
+        <div class="events-hero-content">
+            
+            <!-- Breadcrumb Navigation -->
+            <nav class="events-breadcrumb" id="hero-breadcrumb" aria-label="Breadcrumb">
+                <a href="index.html" class="breadcrumb-link">Home</a>
+                <span class="breadcrumb-separator">→</span>
+                <span class="breadcrumb-current">Private Events</span>
+            </nav>
+            
+            <!-- Gold Label -->
+            <p class="events-hero-label" id="hero-label">PRIVATE EVENTS AND DINING</p>
+            
+            <!-- Main Heading -->
+            <h1 class="events-hero-heading" id="hero-heading">Events and Occasions</h1>
+            
+            <!-- Subheading -->
+            <p class="events-hero-subheading" id="hero-subheading">
+                Intimate celebrations, exclusive dinners and curated experiences — all crafted entirely around you.
+            </p>
+            
+            <!-- Trust Items - Side by side -->
+            <div class="events-trust-items" id="hero-trust-items">
+                <!-- Trust Item 1: Capacity -->
+                <div class="trust-item">
+                    <!-- Lucide Users icon -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="trust-icon">
+                        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+                        <circle cx="9" cy="7" r="4"/>
+                        <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                    </svg>
+                    <span>Up to 20 Guests</span>
+                </div>
+                
+                <!-- Trust Item 2: Arrangements -->
+                <div class="trust-item">
+                    <!-- Lucide Calendar icon -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="trust-icon">
+                        <rect width="18" height="18" x="3" y="4" rx="2" ry="2"/>
+                        <line x1="16" x2="16" y1="2" y2="6"/>
+                        <line x1="8" x2="8" y1="2" y2="6"/>
+                        <line x1="3" x2="21" y1="10" y2="10"/>
+                    </svg>
+                    <span>Bespoke Arrangements</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Gold Separator Line - Draws from center outward -->
+        <div class="events-hero-separator" id="hero-line"></div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════
+         SECTION 2 — EVENT TYPES
+         Primary showcase section with 4 event type cards
+         Layout: 2 column grid desktop, 1 column mobile
+         ═══════════════════════════════════════════════ -->
+    <section class="event-types-section" id="event-types-section">
+        <div class="container">
+            
+            <!-- Section Header -->
+            <div class="section-header">
+                <!-- Section Label -->
+                <p class="section-label">WHAT WE OFFER</p>
+                
+                <!-- Section Heading -->
+                <h2 class="section-heading" id="event-types-heading">How Can We Host You?</h2>
+                
+                <!-- Intro Paragraph -->
+                <p class="section-intro" id="event-types-intro">
+                    Our events team tailors every occasion entirely to your vision. From intimate celebrations to corporate gatherings, we craft experiences that reflect your unique requirements.
+                </p>
+            </div>
+            
+            <!-- Event Type Cards Grid -->
+            <div class="event-types-grid" id="event-types-grid">
+                
+                <!-- Card 1: Private Dining -->
+                <div class="event-type-card" data-aos="fade-up" data-aos-delay="0">
+                    <!-- Card Image Container -->
+                    <div class="event-card-image-wrapper">
+                        <img src="assets/images/events/private-dining-setup.webp" alt="Private dining room setup" class="event-card-image" loading="lazy">
+                        <!-- Dark gradient overlay at bottom -->
+                        <div class="event-card-gradient"></div>
+                    </div>
+                    
+                    <!-- Card Content -->
+                    <div class="event-card-content">
+                        <!-- Gold ornamental symbol -->
+                        <span class="event-card-ornament">✦</span>
+                        
+                        <!-- Event Type Name -->
+                        <h3 class="event-card-name">Private Dining</h3>
+                        
+                        <!-- Description -->
+                        <p class="event-card-description">
+                            Our exclusive private dining room accommodates up to 20 guests for the most intimate of occasions. From the menu to the flowers, every detail is curated around you.
+                        </p>
+                        
+                        <!-- Capacity -->
+                        <p class="event-card-capacity">Up to 20 guests</p>
+                        
+                        <!-- Separator Line -->
+                        <div class="event-card-separator"></div>
+                        
+                        <!-- Enquiry Button -->
+                        <button class="btn btn-outlined event-enquiry-btn" data-event-type="Private Dining">
+                            Enquire About Private Dining
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Card 2: Corporate Events -->
+                <div class="event-type-card" data-aos="fade-up" data-aos-delay="100">
+                    <!-- Card Image Container -->
+                    <div class="event-card-image-wrapper">
+                        <img src="assets/images/events/corporate-event.webp" alt="Corporate event dining" class="event-card-image" loading="lazy">
+                        <!-- Dark gradient overlay at bottom -->
+                        <div class="event-card-gradient"></div>
+                    </div>
+                    
+                    <!-- Card Content -->
+                    <div class="event-card-content">
+                        <!-- Gold ornamental symbol -->
+                        <span class="event-card-ornament">✦</span>
+                        
+                        <!-- Event Type Name -->
+                        <h3 class="event-card-name">Corporate Events</h3>
+                        
+                        <!-- Description -->
+                        <p class="event-card-description">
+                            Impress clients and reward your team with a Lumière corporate dinner. We offer bespoke menus, AV arrangements and dedicated service staff for the evening.
+                        </p>
+                        
+                        <!-- Capacity -->
+                        <p class="event-card-capacity">Up to 20 guests</p>
+                        
+                        <!-- Separator Line -->
+                        <div class="event-card-separator"></div>
+                        
+                        <!-- Enquiry Button -->
+                        <button class="btn btn-outlined event-enquiry-btn" data-event-type="Corporate Event">
+                            Enquire About Corporate Dining
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Card 3: Celebrations -->
+                <div class="event-type-card" data-aos="fade-up" data-aos-delay="200">
+                    <!-- Card Image Container -->
+                    <div class="event-card-image-wrapper">
+                        <img src="assets/images/events/celebration.webp" alt="Celebration event" class="event-card-image" loading="lazy">
+                        <!-- Dark gradient overlay at bottom -->
+                        <div class="event-card-gradient"></div>
+                    </div>
+                    
+                    <!-- Card Content -->
+                    <div class="event-card-content">
+                        <!-- Gold ornamental symbol -->
+                        <span class="event-card-ornament">✦</span>
+                        
+                        <!-- Event Type Name -->
+                        <h3 class="event-card-name">Celebrations</h3>
+                        
+                        <!-- Description -->
+                        <p class="event-card-description">
+                            Birthdays, anniversaries, engagements and proposals — our team transforms every celebration into a memory that stays with you long after the evening ends.
+                        </p>
+                        
+                        <!-- Capacity -->
+                        <p class="event-card-capacity">Up to 20 guests</p>
+                        
+                        <!-- Separator Line -->
+                        <div class="event-card-separator"></div>
+                        
+                        <!-- Enquiry Button -->
+                        <button class="btn btn-outlined event-enquiry-btn" data-event-type="Birthday Celebration">
+                            Enquire About a Celebration
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Card 4: Wine and Tasting Evenings -->
+                <div class="event-type-card" data-aos="fade-up" data-aos-delay="300">
+                    <!-- Card Image Container -->
+                    <div class="event-card-image-wrapper">
+                        <img src="assets/images/interior/dining-room-01.webp" alt="Wine tasting evening" class="event-card-image" loading="lazy">
+                        <!-- Dark gradient overlay at bottom -->
+                        <div class="event-card-gradient"></div>
+                    </div>
+                    
+                    <!-- Card Content -->
+                    <div class="event-card-content">
+                        <!-- Gold ornamental symbol -->
+                        <span class="event-card-ornament">✦</span>
+                        
+                        <!-- Event Type Name -->
+                        <h3 class="event-card-name">Wine and Tasting Evenings</h3>
+                        
+                        <!-- Description -->
+                        <p class="event-card-description">
+                            Join us for an exclusive curated evening with our head sommelier. Seasonal tasting menus paired with exceptional wines selected to complement every course.
+                        </p>
+                        
+                        <!-- Capacity -->
+                        <p class="event-card-capacity">Up to 30 guests</p>
+                        
+                        <!-- Separator Line -->
+                        <div class="event-card-separator"></div>
+                        
+                        <!-- Enquiry Button -->
+                        <button class="btn btn-outlined event-enquiry-btn" data-event-type="Wine and Tasting Evening">
+                            Enquire About a Tasting Evening
+                        </button>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════
+         SECTION 3 — PRIVATE DINING ROOM FEATURE
+         Full width split layout: Images left (55%) / Content right (45%)
+         Premium overlapping image composition
+         ═══════════════════════════════════════════════ -->
+    <section class="private-dining-feature-section" id="private-dining-feature">
+        <div class="container-wide">
+            <div class="private-dining-layout">
+                
+                <!-- LEFT COLUMN — Image Arrangement -->
+                <div class="private-dining-images" id="private-dining-images">
+                    <!-- Main Large Image -->
+                    <div class="main-image-wrapper" id="main-image">
+                        <img src="assets/images/interior/private-dining.webp" alt="Private dining room at Lumière" class="main-image" loading="lazy">
+                    </div>
+                    
+                    <!-- Overlapping Smaller Image - Bottom right corner -->
+                    <div class="overlay-image-wrapper" id="overlay-image">
+                        <img src="assets/images/interior/dining-room-02.webp" alt="Private dining table setting detail" class="overlay-image" loading="lazy">
+                    </div>
+                </div>
+                
+                <!-- RIGHT COLUMN — Text Content -->
+                <div class="private-dining-content" id="private-dining-content">
+                    
+                    <!-- Gold Label -->
+                    <p class="content-label" id="private-room-label">THE PRIVATE ROOM</p>
+                    
+                    <!-- Heading -->
+                    <h2 class="content-heading" id="private-room-heading">An Exclusive Space Reserved for You</h2>
+                    
+                    <!-- Atmospheric Paragraph -->
+                    <p class="content-paragraph" id="private-room-paragraph">
+                        Separated entirely from the main dining room, our private space seats up to twenty guests around a single magnificent table. The room is yours for the evening — the menu, the pace, the atmosphere, the music — all curated to your vision. Whether you are hosting twelve for a birthday dinner or twenty for a boardroom celebration, the experience will be entirely your own.
+                    </p>
+                    
+                    <!-- Gold Divider -->
+                    <div class="content-divider"></div>
+                    
+                    <!-- Capacity and Feature Info Blocks - 2x2 Grid -->
+                    <div class="info-blocks-grid" id="info-blocks">
+                        
+                        <!-- Block 1: Capacity -->
+                        <div class="info-block" data-aos="fade-up" data-aos-delay="0">
+                            <!-- Lucide Users icon -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="info-icon">
+                                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+                                <circle cx="9" cy="7" r="4"/>
+                                <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                            </svg>
+                            <p class="info-label">CAPACITY</p>
+                            <p class="info-value">Up to 20 guests</p>
+                        </div>
+                        
+                        <!-- Block 2: Minimum Booking -->
+                        <div class="info-block" data-aos="fade-up" data-aos-delay="100">
+                            <!-- Lucide Clock icon -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="info-icon">
+                                <circle cx="12" cy="12" r="10"/>
+                                <polyline points="12 6 12 12 16 14"/>
+                            </svg>
+                            <p class="info-label">MINIMUM BOOKING</p>
+                            <p class="info-value">3 hours</p>
+                        </div>
+                        
+                        <!-- Block 3: Catering -->
+                        <div class="info-block" data-aos="fade-up" data-aos-delay="200">
+                            <!-- Lucide UtensilsCrossed icon -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="info-icon">
+                                <path d="m16 2-2.3 2.3a3 3 0 0 0 0 4.2l1.8 1.8a3 3 0 0 0 4.2 0L22 8"/>
+                                <path d="M15 15 3.3 3.3a4.2 4.2 0 0 0 0 6l7.3 7.3c.7.7 2 .7 2.8 0L15 15Zm0 0 7 7"/>
+                                <path d="m2.1 21.8 6.4-6.3"/>
+                                <path d="m19 5-7 7"/>
+                            </svg>
+                            <p class="info-label">CATERING</p>
+                            <p class="info-value">Bespoke menu available</p>
+                        </div>
+                        
+                        <!-- Block 4: Minimum Spend -->
+                        <div class="info-block" data-aos="fade-up" data-aos-delay="300">
+                            <!-- Lucide Wine icon -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="info-icon">
+                                <path d="M8 22h8"/>
+                                <path d="M12 11v11"/>
+                                <path d="m19 3-7 8-7-8Z"/>
+                            </svg>
+                            <p class="info-label">MINIMUM SPEND</p>
+                            <p class="info-value">From £150 pp</p>
+                        </div>
+                        
+                    </div>
+                    
+                    <!-- Gold Divider -->
+                    <div class="content-divider"></div>
+                    
+                    <!-- CTA Button -->
+                    <button class="btn btn-outlined btn-full-width event-enquiry-btn" id="private-room-cta" data-event-type="Private Dining">
+                        Enquire About the Private Room
+                    </button>
+                    
+                    <!-- Contact Line -->
+                    <p class="contact-line">
+                        Or speak to our events team directly — <a href="tel:+442070000001" class="contact-link">+44 20 7000 0001</a>
+                    </p>
+                    
+                </div>
+                
+        </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════
+         SECTION 4 — UPCOMING EVENTS
+         Three event cards with date badges
+         Layout: 3 column grid desktop, 2 column tablet, 1 column mobile
+         ═══════════════════════════════════════════════ -->
+    <section class="upcoming-events-section" id="upcoming-events-section">
+        <div class="container">
+            
+            <!-- Section Header -->
+            <div class="section-header">
+                <!-- Section Label -->
+                <p class="section-label">WHAT'S ON</p>
+                
+                <!-- Section Heading -->
+                <h2 class="section-heading" id="upcoming-events-heading">Upcoming Experiences</h2>
+                
+                <!-- Intro Text -->
+                <p class="section-intro" id="upcoming-events-intro">
+                    Join us for one of our seasonal dining experiences — open to all guests.
+                </p>
+            </div>
+            
+            <!-- Upcoming Events Cards Grid -->
+            <div class="upcoming-events-grid" id="upcoming-events-grid">
+                
+                <!-- Event Card 1: Christmas Tasting Menu -->
+                <div class="upcoming-event-card" data-aos="fade-up" data-aos-delay="0">
+                    <!-- Card Image with Date Badge -->
+                    <div class="upcoming-card-image-wrapper">
+                        <img src="assets/images/events/christmas-tasting.webp" alt="Christmas tasting menu" class="upcoming-card-image" loading="lazy">
+                        
+                        <!-- Date Badge - Overlaid on top-left -->
+                        <div class="event-date-badge">
+                            <span class="badge-month">DEC</span>
+                            <span class="badge-day">24</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Card Content -->
+                    <div class="upcoming-card-content">
+                        <!-- Event Name -->
+                        <h3 class="upcoming-event-name">Christmas Tasting Menu Evening</h3>
+                        
+                        <!-- Description -->
+                        <p class="upcoming-event-description">
+                            A nine-course festive tasting experience with paired wines selected by our head sommelier.
+                        </p>
+                        
+                        <!-- Separator -->
+                        <div class="upcoming-card-separator"></div>
+                        
+                        <!-- Price and Button Row -->
+                        <div class="upcoming-card-footer">
+                            <span class="event-price">£195 per person</span>
+                            <a href="reservations.html" class="btn btn-outlined btn-small">Book This Event</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Event Card 2: New Year's Eve -->
+                <div class="upcoming-event-card" data-aos="fade-up" data-aos-delay="100">
+                    <!-- Card Image with Date Badge -->
+                    <div class="upcoming-card-image-wrapper">
+                        <img src="assets/images/events/new-years-eve.webp" alt="New Year's Eve prestige dinner" class="upcoming-card-image" loading="lazy">
+                        
+                        <!-- Date Badge - Overlaid on top-left -->
+                        <div class="event-date-badge">
+                            <span class="badge-month">DEC</span>
+                            <span class="badge-day">31</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Card Content -->
+                    <div class="upcoming-card-content">
+                        <!-- Event Name -->
+                        <h3 class="upcoming-event-name">New Year's Eve Prestige Dinner</h3>
+                        
+                        <!-- Description -->
+                        <p class="upcoming-event-description">
+                            Welcome the new year with a spectacular ten-course prestige menu, Champagne reception and live piano.
+                        </p>
+                        
+                        <!-- Separator -->
+                        <div class="upcoming-card-separator"></div>
+                        
+                        <!-- Price and Button Row -->
+                        <div class="upcoming-card-footer">
+                            <span class="event-price">£285 per person</span>
+                            <a href="reservations.html" class="btn btn-outlined btn-small">Book This Event</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Event Card 3: Valentine's Night -->
+                <div class="upcoming-event-card" data-aos="fade-up" data-aos-delay="200">
+                    <!-- Card Image with Date Badge -->
+                    <div class="upcoming-card-image-wrapper">
+                        <img src="assets/images/events/valentines.webp" alt="Valentine's night dinner for two" class="upcoming-card-image" loading="lazy">
+                        
+                        <!-- Date Badge - Overlaid on top-left -->
+                        <div class="event-date-badge">
+                            <span class="badge-month">FEB</span>
+                            <span class="badge-day">14</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Card Content -->
+                    <div class="upcoming-card-content">
+                        <!-- Event Name -->
+                        <h3 class="upcoming-event-name">Valentine's Night — A Table for Two</h3>
+                        
+                        <!-- Description -->
+                        <p class="upcoming-event-description">
+                            An intimate five-course menu for couples, with a Champagne toast, rose petal setting and a petit four gift.
+                        </p>
+                        
+                        <!-- Separator -->
+                        <div class="upcoming-card-separator"></div>
+                        
+                        <!-- Price and Button Row -->
+                        <div class="upcoming-card-footer">
+                            <span class="event-price">£165 per person</span>
+                            <a href="reservations.html" class="btn btn-outlined btn-small">Book This Event</a>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════
+         SECTION 5 — ENQUIRY FORM SECTION
+         Two column: Form left (58%) / Info right (42%)
+         Mobile: Stacked - form first, info below
+         ═══════════════════════════════════════════════ -->
+    <section class="enquiry-form-section" id="enquiry-form-section">
+        <div class="container">
+            <div class="enquiry-layout">
+                
+                <!-- LEFT COLUMN — ENQUIRY FORM -->
+                <div class="enquiry-form-wrapper">
+                    
+                    <!-- Form Card -->
+                    <div class="enquiry-form-card" id="enquiry-form-card">
+                        <!-- Form Heading -->
+                        <h2 class="form-card-heading">Send an Enquiry</h2>
+                        <p class="form-card-subtext">Our events team will respond within 24 hours.</p>
+                        
+                        <!-- Enquiry Form -->
+                        <form id="events-enquiry-form" class="enquiry-form" novalidate>
+                            
+                            <!-- Group 1: Personal Details -->
+                            <div class="form-row">
+                                <div class="form-field">
+                                    <label for="full-name" class="form-label">FULL NAME</label>
+                                    <input type="text" id="full-name" name="fullName" class="form-input" placeholder="Your full name" required minlength="2">
+                                </div>
+                                <div class="form-field">
+                                    <label for="email" class="form-label">EMAIL ADDRESS</label>
+                                    <input type="email" id="email" name="email" class="form-input" placeholder="your.email@example.com" required>
+                                </div>
+                            </div>
+                            
+                            <!-- Group 2: Contact -->
+                            <div class="form-row">
+                                <div class="form-field">
+                                    <label for="phone" class="form-label">PHONE NUMBER</label>
+                                    <input type="tel" id="phone" name="phone" class="form-input" placeholder="+44 20 0000 0000" required>
+                                </div>
+                                <div class="form-field">
+                                    <label for="company" class="form-label">COMPANY OR ORGANISATION — OPTIONAL</label>
+                                    <input type="text" id="company" name="company" class="form-input" placeholder="Company name">
+                                </div>
+                            </div>
+                            
+                            <!-- Group 3: Event Details -->
+                            <div class="form-row">
+                                <div class="form-field">
+                                    <label for="event-type" class="form-label">EVENT TYPE</label>
+                                    <!-- Custom Select Dropdown -->
+                                    <div class="custom-select" id="event-type-wrapper">
+                                        <button type="button" class="custom-select-trigger" id="event-type-trigger">
+                                            <span class="custom-select-value">Select event type</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="custom-select-icon">
+                                                <polyline points="6 9 12 15 18 9"/>
+                                            </svg>
+                                        </button>
+                                        <div class="custom-select-dropdown" id="event-type-dropdown">
+                                            <div class="custom-select-option" data-value="Private Dining">Private Dining</div>
+                                            <div class="custom-select-option" data-value="Corporate Event">Corporate Event</div>
+                                            <div class="custom-select-option" data-value="Birthday Celebration">Birthday Celebration</div>
+                                            <div class="custom-select-option" data-value="Anniversary Dinner">Anniversary Dinner</div>
+                                            <div class="custom-select-option" data-value="Engagement or Proposal">Engagement or Proposal</div>
+                                            <div class="custom-select-option" data-value="Wine and Tasting Evening">Wine and Tasting Evening</div>
+                                            <div class="custom-select-option" data-value="Other">Other</div>
+                                        </div>
+                                    </div>
+                                    <input type="hidden" id="event-type-select" name="eventType" required>
+                                </div>
+                                <div class="form-field">
+                                    <label for="event-date" class="form-label">PREFERRED DATE</label>
+                                    <input type="text" id="event-date" name="eventDate" class="form-input" placeholder="Select a date" required readonly>
+                                </div>
+                            </div>
+                            
+                            <!-- Group 4: Event Specifics -->
+                            <div class="form-row">
+                                <div class="form-field">
+                                    <label for="guests" class="form-label">NUMBER OF GUESTS</label>
+                                    <!-- Custom Guest Stepper -->
+                                    <div class="guest-stepper" id="guest-stepper">
+                                        <button type="button" class="stepper-btn stepper-minus" id="stepper-minus" aria-label="Decrease guests">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                <line x1="5" y1="12" x2="19" y2="12"/>
+                                            </svg>
+                                        </button>
+                                        <span class="stepper-value" id="stepper-value">10</span>
+                                        <button type="button" class="stepper-btn stepper-plus" id="stepper-plus" aria-label="Increase guests">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                <line x1="12" y1="5" x2="12" y2="19"/>
+                                                <line x1="5" y1="12" x2="19" y2="12"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <input type="hidden" id="guests" name="guests" value="10" required>
+                                </div>
+                                <div class="form-field">
+                                    <label for="event-time" class="form-label">PREFERRED TIME</label>
+                                    <!-- Custom Select Dropdown -->
+                                    <div class="custom-select" id="event-time-wrapper">
+                                        <button type="button" class="custom-select-trigger" id="event-time-trigger">
+                                            <span class="custom-select-value">Select time</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="custom-select-icon">
+                                                <polyline points="6 9 12 15 18 9"/>
+                                            </svg>
+                                        </button>
+                                        <div class="custom-select-dropdown" id="event-time-dropdown">
+                                            <div class="custom-select-option" data-value="18:00">6:00 PM</div>
+                                            <div class="custom-select-option" data-value="18:30">6:30 PM</div>
+                                            <div class="custom-select-option" data-value="19:00">7:00 PM</div>
+                                            <div class="custom-select-option" data-value="19:30">7:30 PM</div>
+                                            <div class="custom-select-option" data-value="20:00">8:00 PM</div>
+                                            <div class="custom-select-option" data-value="20:30">8:30 PM</div>
+                                            <div class="custom-select-option" data-value="21:00">9:00 PM</div>
+                                            <div class="custom-select-option" data-value="21:30">9:30 PM</div>
+                                            <div class="custom-select-option" data-value="22:00">10:00 PM</div>
+                                        </div>
+                                    </div>
+                                    <input type="hidden" id="event-time" name="eventTime" required>
+                                </div>
+                            </div>
+                            
+                            <!-- Group 5: Budget -->
+                            <div class="form-row">
+                                <div class="form-field form-field-full">
+                                    <label for="budget" class="form-label">APPROXIMATE BUDGET — OPTIONAL</label>
+                                    <!-- Custom Select Dropdown -->
+                                    <div class="custom-select" id="budget-wrapper">
+                                        <button type="button" class="custom-select-trigger" id="budget-trigger">
+                                            <span class="custom-select-value">Select budget range</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="custom-select-icon">
+                                                <polyline points="6 9 12 15 18 9"/>
+                                            </svg>
+                                        </button>
+                                        <div class="custom-select-dropdown" id="budget-dropdown">
+                                            <div class="custom-select-option" data-value="Under £75 per person">Under £75 per person</div>
+                                            <div class="custom-select-option" data-value="£75 to £125 per person">£75 to £125 per person</div>
+                                            <div class="custom-select-option" data-value="£125 to £175 per person">£125 to £175 per person</div>
+                                            <div class="custom-select-option" data-value="£175 to £250 per person">£175 to £250 per person</div>
+                                            <div class="custom-select-option" data-value="Over £250 per person">Over £250 per person</div>
+                                            <div class="custom-select-option" data-value="To be discussed">To be discussed</div>
+                                        </div>
+                                    </div>
+                                    <input type="hidden" id="budget" name="budget">
+                                </div>
+                            </div>
+                            
+                            <!-- Group 6: Message -->
+                            <div class="form-row">
+                                <div class="form-field form-field-full">
+                                    <label for="event-message" class="form-label">ADDITIONAL DETAILS</label>
+                                    <textarea id="event-message" name="eventMessage" class="form-textarea" placeholder="Please share any additional details about your event — theme, dietary requirements, special arrangements, or anything else we should know." maxlength="600"></textarea>
+                                    <!-- Character Counter -->
+                                    <div class="textarea-counter">
+                                        <span id="char-count">0</span> / 600
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Submit Button -->
+                            <button type="submit" class="btn btn-primary btn-submit" id="submit-enquiry-btn">
+                                <span class="btn-text">Submit Enquiry</span>
+                                <!-- Lucide Send icon -->
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="btn-icon">
+                                    <line x1="22" y1="2" x2="11" y2="13"/>
+                                    <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+                                </svg>
+                            </button>
+                            
+                            <!-- Footer Text -->
+                            <p class="form-footer-text">
+                                We aim to respond to all enquiries within 24 hours. For urgent requests please call our events team directly on the number below.
+                            </p>
+                            
+                        </form>
+                    </div>
+                    
+                    <!-- SUCCESS MESSAGE OVERLAY (hidden by default) -->
+                    <div class="enquiry-success-card" id="enquiry-success-card" style="display: none;">
+                        <!-- Success Icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="success-icon" id="success-icon">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                            <polyline points="22 4 12 14.01 9 11.01"/>
+                        </svg>
+                        
+                        <!-- Success Heading -->
+                        <h2 class="success-heading" id="success-heading">Your Enquiry Has Been Received</h2>
+                        
+                        <!-- Success Message -->
+                        <p class="success-text">
+                            Thank you for your interest in hosting your event at Lumière. A member of our events team will contact you personally within 24 hours to discuss your occasion in detail. We very much look forward to welcoming you.
+                        </p>
+                        
+                        <!-- Gold Divider -->
+                        <div class="success-divider"></div>
+                        
+                        <!-- Enquiry Summary -->
+                        <div class="enquiry-summary" id="enquiry-summary">
+                            <div class="summary-row">
+                                <span class="summary-label">Name:</span>
+                                <span class="summary-value" id="summary-name"></span>
+                            </div>
+                            <div class="summary-row">
+                                <span class="summary-label">Event Type:</span>
+                                <span class="summary-value" id="summary-event-type"></span>
+                            </div>
+                            <div class="summary-row">
+                                <span class="summary-label">Date:</span>
+                                <span class="summary-value" id="summary-date"></span>
+                            </div>
+                            <div class="summary-row">
+                                <span class="summary-label">Guests:</span>
+                                <span class="summary-value" id="summary-guests"></span>
+                            </div>
+                        </div>
+                        
+                        <!-- Gold Divider -->
+                        <div class="success-divider"></div>
+                        
+                        <!-- Reset Button -->
+                        <button type="button" class="btn btn-secondary" id="submit-another-enquiry-btn">
+                            Submit Another Enquiry
+                        </button>
+                    </div>
+                    
+                </div>
+                
+                <!-- RIGHT COLUMN — SUPPORTING INFORMATION -->
+                <div class="enquiry-info-column" id="enquiry-info-column">
+                    
+                    <!-- Block 1: Why Choose Lumière -->
+                    <div class="info-block" data-aos="fade-left" data-aos-delay="0">
+                        <h3 class="info-block-label">WHY LUMIÈRE</h3>
+                        <ul class="info-list-bullets">
+                            <li>Dedicated events coordinator</li>
+                            <li>Bespoke menu design with Chef Marchand</li>
+                            <li>White glove service throughout</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Block 2: What's Included -->
+                    <div class="info-block" data-aos="fade-left" data-aos-delay="100">
+                        <h3 class="info-block-label">WHAT'S INCLUDED</h3>
+                        <ul class="info-list">
+                            <li>Exclusive use of private dining room</li>
+                            <li>Personalised menu printed with your event details</li>
+                            <li>Floral arrangements included</li>
+                            <li>Dedicated sommelier available</li>
+                            <li>Room dressed to your theme</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Block 3: Contact the Events Team -->
+                    <div class="info-block" data-aos="fade-left" data-aos-delay="200">
+                        <h3 class="info-block-label">SPEAK TO US</h3>
+                        <div class="contact-items">
+                            <!-- Phone -->
+                            <a href="tel:+442070000001" class="contact-item">
+                                <!-- Lucide Phone icon -->
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="contact-icon">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                                </svg>
+                                <span>+44 20 7000 0001</span>
+                            </a>
+                            <!-- Email -->
+                            <a href="/cdn-cgi/l/email-protection#ec899a8982989fac80998185899e89c19e899f988d999e8d8298c28f83c29987" class="contact-item">
+                                <!-- Lucide Mail icon -->
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="contact-icon">
+                                    <rect width="20" height="16" x="2" y="4" rx="2"/>
+                                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+                                </svg>
+                                <span><span class="__cf_email__" data-cfemail="cfaab9aaa1bbbc8fa3baa2a6aabdaae2bdaabcbbaebabdaea1bbe1aca0e1baa4">[email&#160;protected]</span></span>
+                            </a>
+                        </div>
+                        <p class="contact-note">Our events team is available Monday to Friday 10am to 6pm</p>
+                    </div>
+                    
+                    <!-- Block 4: Testimonial -->
+                    <div class="info-block" data-aos="fade-left" data-aos-delay="300">
+                        <h3 class="info-block-label">WHAT OUR HOSTS SAY</h3>
+                        <blockquote class="testimonial-quote">
+                            "Lumière transformed our anniversary dinner into an evening we will never forget. The attention to detail was extraordinary."
+                        </blockquote>
+                        <p class="testimonial-attribution">— Catherine and William Forsythe</p>
+                        <p class="testimonial-event">30th Anniversary Dinner</p>
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════
+         SECTION 6 — ALLERGEN AND POLICY NOTICE
+         Short centered policy text
+         ═══════════════════════════════════════════════ -->
+    <section class="policy-notice-section" id="policy-notice-section">
+        <div class="container">
+            <p class="policy-notice-text" data-aos="fade-up">
+                All private events are subject to our standard terms and conditions. Dietary requirements and allergen information must be provided at least 72 hours before your event. A non-refundable deposit of 30% is required to secure your booking. Full payment is due 7 days before your event date.
+            </p>
+        </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════
+         RESERVATION CTA COMPONENT
+         Loads dynamically via component-loader.js
+         ═══════════════════════════════════════════════ -->
+    <div id="reservation-cta-container"></div>
+
+    <!-- ═══════════════════════════════════════════════
+         FOOTER
+         Loads dynamically via component-loader.js
+         ═══════════════════════════════════════════════ -->
+    <div id="footer-container"></div>
+
+    <!-- ═══════════════════════════════════════════════
+         BACK TO TOP BUTTON
+         Fixed position button, appears on scroll
+         ═══════════════════════════════════════════════ -->
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+        <!-- Lucide ChevronUp icon -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m18 15-6-6-6 6"/>
+        </svg>
+    </button>
+
+
+    <!-- ═══════════════════════════════════════════════
+         JAVASCRIPT LIBRARIES
+         Load order: External libraries first, then custom scripts
+         ═══════════════════════════════════════════════ -->
+    
+    <!-- GSAP Core -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    
+    <!-- GSAP ScrollTrigger Plugin -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    
+    <!-- Lenis Smooth Scroll -->
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+    
+    <!-- AOS - Animate On Scroll -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Flatpickr - Date Picker -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    
+    <!-- CountUp.js - Number Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/2.8.0/countUp.umd.min.js"></script>
+    
+    <!-- ═══════════════════════════════════════════════
+         CUSTOM JAVASCRIPT FILES
+         Load order: Core → Components → Page-specific → Main
+         ═══════════════════════════════════════════════ -->
+    
+    <!-- Core Files - Foundation functionality -->
+    <script src="assets/js/core/component-loader.js"></script>
+    <script src="assets/js/core/cursor.js"></script>
+    <script src="assets/js/core/loader.js"></script>
+    <script src="assets/js/core/navbar.js"></script>
+    <script src="assets/js/core/smooth-scroll.js"></script>
+    
+    <!-- Component Files - Reusable components -->
+    <script src="assets/js/components/animations-init.js"></script>
+    <script src="assets/js/comp
+onents/form-handler.js"></script>
+    <script src="assets/js/components/counter.js"></script>
+    
+    <!-- Page-specific File - Events page functionality -->
+    <script src="assets/js/pages/events.js"></script>
+    
+    <!-- Main File - Global initialization (must load last) -->
+    <script src="assets/js/main.js"></script>
+
+</body>
+</html>

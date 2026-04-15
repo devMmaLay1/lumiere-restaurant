@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Ÿ” EDIT: Update meta description for SEO -->
+    <meta name="description" content="Explore the Lumière menu — seasonal tasting menus, signature dishes and an exceptional wine list crafted by Chef ‰tienne Marchand.">
+
+    <!-- Ÿ” EDIT: Update page title -->
+    <title>Lumière — The Menu | Fine Dining Restaurant</title>
+
+    <!-- Ÿ” EDIT: Replace with your preferred Google Fonts -->
+    <!-- Current fonts: Cormorant Garamond, Playfair Display, DM Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Playfair+Display:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/utilities.css">
+    <link rel="stylesheet" href="assets/css/pages/menu.css">
+</head>
+<body>
+
+    <!-- Page Loader -->
+    <div id="page-loader">
+        <div class="loader-content">
+            <img src="assets/images/brand/logo.webp" alt="Lumière logo" class="loader-logo">
+            <div class="loader-bar"></div>
+        </div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor"></div>
+    <div class="custom-cursor-dot"></div>
+
+    <!-- Navbar -->
+    <div id="navbar-container"></div>
+
+
+    <!-- •••••••••••••••••••••••••••••••••••••••••••••••
+         SECTION 1 — PAGE HERO
+         Full-width hero banner with breadcrumb and heading
+         Ÿ” EDIT: Update hero image and text below
+         ••••••••••••••••••••••••••••••••••••••••••••••• -->
+    <section class="menu-hero" id="menu-hero">
+        <!-- Ÿ” EDIT: Replace with your hero image (recommended: 1920x800px) -->
+        <div class="menu-hero-bg" style="background-image: url('assets/images/hero/hero-menu.webp')"></div>
+        <div class="menu-hero-overlay"></div>
+        <div class="menu-hero-content">
+            <!-- Ÿ” EDIT: Update breadcrumb links if needed -->
+            <nav class="menu-breadcrumb" id="menu-breadcrumb" aria-label="Breadcrumb">
+                <a href="index.html" class="breadcrumb-link">Home</a>
+                <span class="breadcrumb-separator">→’</span>
+                <span class="breadcrumb-current">The Menu</span>
+            </nav>
+            
+            <!-- Ÿ” EDIT: Update label text -->
+            <p class="menu-hero-label" id="menu-hero-label">OUR MENU</p>
+            
+            <!-- Ÿ” EDIT: Update main heading -->
+            <h1 class="menu-hero-heading" id="menu-hero-heading">The Menu</h1>
+            
+            <!-- Ÿ” EDIT: Update subheading/tagline -->
+            <p class="menu-hero-subheading" id="menu-hero-subheading">Seasonal ingredients. Classical technique. Extraordinary flavour.</p>
+        </div>
+        <div class="menu-hero-separator" id="menu-hero-separator"></div>
+    </section>
+
+
+    <!-- •••••••••••••••••••••••••••••••••••••••••••••••
+         SECTION 2 — MENU INTRODUCTION
+         Two-column layout: Philosophy text + Stats
+         Ÿ” EDIT: Update philosophy text and stats below
+         ••••••••••••••••••••••••••••••••••••••••••••••• -->
+    <section class="menu-intro-section" id="menu-intro">
+        <div class="container">
+            <div class="menu-intro-layout">
+
+                <!-- Left: Philosophy -->
+                <div class="menu-intro-text">
+                    <!-- Ÿ” EDIT: Update your restaurant's menu philosophy -->
+                    <p class="menu-intro-paragraph" id="menu-intro-paragraph">
+                        Our menu is a living document — rewritten with the seasons, refined by experience, and guided always by the finest ingredients available to us. Chef Marchand changes the menu four times each year to honour what nature provides at its best.
+                    </p>
+                </div>
+
+                <!-- Divider (hidden on mobile) -->
+                <div class="menu-intro-divider" id="menu-intro-divider"></div>
+
+                <!-- Right: Stats -->
+                <!-- Ÿ” EDIT: Change data-count values and labels -->
+                <div class="menu-intro-stats">
+                    <div class="menu-stat">
+                        <span class="menu-stat-number" data-count="7" id="stat-1">0</span>
+                        <span class="menu-stat-label">Tasting Courses</span>
+                    </div>
+                    <div class="menu-stat">
+                        <span class="menu-stat-number" data-count="30" id="stat-2">0</span>
+                        <span class="menu-stat-label">Years Experience</span>
+                    </div>
+                    <div class="menu-stat">
+                        <span class="menu-stat-number" data-count="4" id="stat-3">0</span>
+                        <span class="menu-stat-label">Seasonal Changes</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- •••••••••••••••••••••••••••••••••••••••••••••••
+         SECTION 3 — STICKY FILTER BAR
+         ••••••••••••••••••••••••••••••••••••••••••••••• -->
+    <div class="menu-filter-bar" id="menu-filter-bar">
+        <div class="container">
+            <!-- Ÿ” EDIT: Add or remove filter tabs to match your categories -->
+            <div class="menu-filter-inner" id="menu-filter-inner">
+                <button class="menu-filter-tab active" data-filter="all">All</button>
+                <button class="menu-filter-tab" data-filter="starters">Starters</button>
+                <button class="menu-filter-tab" data-filter="mains">Mains</button>
+                <button class="menu-filter-tab" data-filter="seafood">Seafood</button>
+                <button class="menu-filter-tab" data-filter="cheese">Cheese</button>
+                <button class="menu-filter-tab" data-filter="desserts">Desserts</button>
+                <button class="menu-filter-tab" data-filter="drinks">Drinks</button>
+                <button class="menu-filter-tab" data-filter="tasting">Tasting Menus</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Spacer — fills the gap when filter bar goes fixed -->
+    <div class="menu-filter-spacer" id="menu-filter-spacer"></div>
+
+
+    <!-- •••••••••••••••••••••••••••••••••••••••••••••••
+         SECTION 4 — ALL MENU ITEMS CONTAINER
+         This single container holds ALL cards.
+         The filter + pagination system controls visibility.
+         DO NOT split cards across multiple sections.
+         ••••••••••••••••••••••••••••••••••••••••••••••• -->
+    <div class="menu-content-area" id="menu-content-area">
+        <div class="container">
+
+            <!-- Active category label — updates via JS -->
+            <div class="menu-active-label" id="menu-active-label">
+                <div class="menu-section-ornament"></div>
+                <h2 class="menu-section-heading" id="menu-active-heading">All Dishes</h2>
+            </div>
+
+            <!-- Flat card grid — ALL cards live here -->
+            <!-- Ÿ” EDIT: Add your dish cards here. Each card needs data-category matching a filter tab -->
+            <div class="menu-items-grid" id="menu-items-grid">
+
+
+                <!-- ••••••••••••••••••••••
+                     STARTERS — 8 cards
+                     data-category="starters"
+                     •••••••••••••••••••••• -->
+
+                <!-- Ÿ” EDIT: Replace dish name, price, description, image and badges -->
+                <div class="menu-item-card" data-category="starters">
+                    <div class="menu-item-image">
+                        <img src="assets/images/dishes/seared-scallops.webp" alt="Seared Scallops with Cauliflower Velouté" loading="lazy">
+                        <div class="menu-item-gradient"></div>
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3 class="menu-item-name">Seared Scallops with Cauliflower Velouté</h3>
+                            <span class="menu-item-price">£24</span>
+                        </div>
+                        <p class="menu-item-desc">Hand-dived scallops, silky cauliflower purée, crispy pancetta</p>
+                        <div class="menu-item-badges"><span class="badge badge-gf">GF</span></div>
+                        <div class="menu-item-line"></div>
+                    </div>
+                </div>
+
+                <div class="menu-item-card" data-category="starters">
+                    <div class="menu-item-image">
+                        <img src="assets/images/dishes/foie-gras.webp" alt="Foie Gras Torchon with Brioche and Fig Compote" loading="lazy">
+                        <div class="menu-item-gradient"></div>
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3 class="menu-item-name">Foie Gras Torchon with Brioche and Fig Compote</h3>
+                            <span class="menu-item-price">£28</span>
+                        </div>
+                        <p class="menu-item-desc">Silky foie gras, toasted brioche, seasonal fig preserve</p>
+                        <div class="menu-item-badges"><span class="badge badge-special">★</span></div>
+                        <div class="menu-item-line"></div>
+                    </div>
+                </div>
+
+                <div class="menu-item-card" data-category="starters">
+                    <div class="menu-item-image">
+                        <img src="assets/images/dishes/tuna-tartare.webp" alt="Tuna Tartare with Avocado and Yuzu Gel" loading="lazy">
+                        <div class="menu-item-gradient"></div>
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3 class="menu-item-name">Tuna Tartare with Avocado and Yuzu Gel</h3>
+                            <span class="menu-item-price">£22</span>
+                        </div>
+                        <p class="menu-item-desc">Sashimi-grade tuna, creamy avocado, citrus yuzu dressing</p>
+                        <div class="menu-item-badges"><span class="badge badge-gf">GF</span></div>
+                        <div class="menu-item-line"></div>
+                    </div>
+                </div>
+
+                <div class="menu-item-card" data-category="starters">
+                    <div class="menu-item-image">
+                        <img src="assets/images/dishes/burrata.webp" alt="Burrata with Heirloom Tomatoes and Aged Balsamic" loading="lazy">
+                        <div class="menu-item-gradient"></div>
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3 class="menu-item-name">Burrata with Heirloom Tomatoes and Aged Balsamic</h3>
+                            <span class="menu-item-price">£18</span>
+                        </div>
+                        <p class="menu-item-desc">Creamy burrata, heritage tomatoes, 25-year balsamic</p>
+                        <div class="menu-item-badges"><span class="badge badge-v">V</span></div>
+                        <div class="menu-item-line"></div>
+                    </div>
+                </div>
+
+                <div class="menu-item-card" data-category="starters">
+                    <div class="menu-item-image">
+                        <img src="assets/images/dishes/lobster-bisque.webp" alt="Lobster Bisque with Cognac Cream" loading="lazy">
+                        <div class="menu-item-gradient"></div>
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3 class="menu-item-name">Lobster Bisque with Cognac Cream</h3>
+                            <span class="menu-item-price">£26</span>
+                        </div>
+                        <p class="menu-item-desc">Rich shellfish bisque, cognac-infused cream, chervil</p>
+                        <div class="menu-item-badges"><span class="badge badge-gf">GF</span></div>
+                        <div class="menu-item-line"></div>
+                    </div>
+                </div>
+
+                <div class="menu-item-card" data-category="starters">
+                    <div class="menu-item-image">
+                        <img src="assets/images/dishes/wild-mushroom-veloute.webp" alt="Wild Mushroom Velouté with Truffle Oil" loading="lazy">
+                        <div class="menu-item-gradient"></div>
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3 class="menu-item-name">Wild Mushroom Velouté with Truffle Oil</h3>
+                            <span class="menu-item-price">£16</span>
+                        </div>
+                        <p class="menu-item-desc">Forest mushrooms, white truffle oil, crispy shallots</p>
+                        <div class="menu-item-badges">
+                            <span class="badge badge-v">V</span>
+                            <span class="badge badge-ve">VE</span>
+                        </div>
+                        <div class="menu-item-line"></div>
+                    </div>
+                </div>
+
+                <div class="menu-item-card" data-category="starters">
+                    <div class="menu-item-image">
+                        <img src="assets/images/dishes/smoked-salmon.webp" alt="Smoked Salmon Roulade with Crème Fraîche and Caviar" loading="lazy">
+                        <div class="menu-item-gradient"></div>
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3 class="menu-item-name">Smoked Salmon Roulade with Crème Fraîche and Caviar</h3>
+                            <span class="menu-item-price">£24</span>
+                        </div>
+                        <p class="menu-item-desc">Scottish smoked salmon, crème fraîche, Oscietra caviar</p>
+                        <div class="menu-item-badges"><span class="badge badge-gf">GF</span></div>
+                        <div class="menu-item-line"></div>
+                    </div>
+                </div>
+
+                <div class="menu-item-card" data-category="starters">
+                    <div class="menu-item-image">
+                        <img src="assets/images/dishes/beef-carpaccio.webp" alt="Beef Carpaccio with Shaved Parmesan and Rocket" loading="lazy">
+                        <div class="menu-item-gradient"></div>
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3 class="menu-item-name">Beef Carpaccio with Shaved Parmesan and Rocket</h3>
+                            <span class="menu-item-price">£20</span>
+                        </div>
+                        <p class="menu-item-desc">Thinly sliced beef fillet, aged Parmesan, peppery rocket</p>
+                        <div class="menu-item-badges"><span class="badge badge-gf">GF</span></div>
+                        <div class="menu-item-line"></div>
+                    </div>
+                </div>
+
+
+                <!-- ••••••••••••••••••••••
+                     MAINS — 8 cards
+                     data-category="mains"
+                     •••••••••••••••••••••• -->
+
+                <div class="menu-item-card" data-category="mains">
+                    <div class="menu-item-image">
+                        <img src="assets/images/dishes/dry-aged-beef.webp" alt="Dry Aged Beef Fillet with Truffle Jus and Fondant Potato" loading="lazy">
+                        <div class="menu-item-gradient"></div>
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3 class="menu-item-name">Dry Aged Beef Fillet with Truffle Jus and Fondant Potato</h3>
+                            <span class="menu-item-price">£58</span>
+                        </div>
+                        <p class="menu-item-desc">45-day aged beef, black truffle sauce, butter-poached potato</p>
+                        <div class="menu-item-badges">
+                            <span class="badge badge-gf">GF</span>
+                            <span class="badge badge-special">★</span>
+                        </div>
+                        <div class="menu-item-line"></div>
+                    </div>
+                </div>
+
+                <div class="menu-item-card" data-category="mains">
+                    <div class="menu-item-image">
+                        <img src="assets/images/dishes/lobster-tail.webp" alt="Roasted Lobster Tail with Bisque Foam and Caviar" loading="lazy">
+                        <div class="menu-item-gradient"></div>
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3 class="menu-item-name">Roasted Lobster Tail with Bisque Foam and Caviar</h3>
+                            <span class="menu-item-price">£72</span>
+                        </div>
+                        <p class="menu-item-desc">Whole lobster tail, shellfish bisque foam, Oscietra caviar</p>
+                        <div class="menu-item-badges"><span class="badge badge-special">★</span></div>
+                        <div class="menu-item-line"></div>
+                    </div>
+                </div>
+
+                <div class="menu-item-card" data-category="mains">
+                    <div class="menu-item-image">
+                        <img src="assets/images/dishes/duck-breast.webp" alt="Pan Seared Duck Breast with Cherry Reduction" loading="lazy">
+                        <div class="menu-item-gradient"></div>
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3 class="menu-item-name">Pan Seared Duck Breast with Cherry Reduction and Celeriac Purée</h3>
+                            <span class="menu-item-price">£46</span>
+                        </div>
+                        <p class="menu-item-desc">Gressingham duck, morello cherry sauce, silky celeriac</p>
+                        <div class="menu-item-badges"><span class="badge badge-gf">GF</span></div>
+                        <div class="menu-item-line"></div>
+                    </div>
+                </div>
+
+                <div class="menu-item-card" data-category="mains">
+                    <div class="menu-item-image">
+                        <img src="assets/images/dishes/rack-of-lamb.webp" alt="Rack of Lamb with Herb Crust and Rosemary Jus" loading="lazy">
+                        <div class="menu-item-gradient"></div>
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3 class="menu-item-name">Rack of Lamb with Herb Crust and Rosemary Jus</h3>
+                            <span class="menu-item-price">£52</span>
+                        </div>
+                        <p class="menu-item-desc">Welsh lamb, herb breadcrumb crust, rosemary reduction</p>
+                        <div class="menu-item-badges"><span class="badge badge-gf">GF</span></div>
+                        <div class="menu-item-line"></div>
+                    </div>
+                </div>
+
+                <div class="menu-item-card" data-category="mains">
+                    <div class="menu-item-image">
+                        <img src="assets/images/dishes/truffle-risotto.webp" alt="Black Truffle Risotto with Aged Parmesan" loading="lazy">
+                        <div class="menu-item-gradient"></div>
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3 class="menu-item-name">Black Truffle Risotto with Aged Parmesan</h3>
+                            <span class="menu-item-price">£38</span>
+                        </div>
+                        <p class="menu-item-desc">Carnaroli rice, black truffle shavings, 36-month Parmesan</p>
+                        <div class="menu-item-badges">
+                            <span class="badge badge-v">V</span>
+                            <span class="badge badge-gf">GF</span>
+                        </div>
+                        <div class="menu-item-line"></div>
+                    </div>
+                </div>
+
+                <div class="menu-item-card" data-category="mains">
+                    <div class="menu-item-image">
+                        <img src="assets/images/dishes/turbot.webp" alt="Turbot Fillet with Champagne Beurre Blanc" loading="lazy">
+                        <div class="menu-item-gradient"></div>
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3 class="menu-item-name">Turbot Fillet with Champagne Beurre Blanc and Asparagus</h3>
+                            <span class="menu-item-price">£54</span>
+                        </div>
+                        <p class="menu-item-desc">Line-caught turbot, champagne butter sauce, English asparagus</p>
+                        <div class="menu-item-badges"><span class="badge badge-gf">GF</span></div>
+                        <div class="menu-item-line"></div>
+                    </div>
+                </div>
+
+                <div class="menu-item-card" data-category="mains">
+                    <div class="menu-item-image">
+                        <img src="assets/images/dishes/wagyu-beef.webp" alt="Wagyu Beef Sirloin with Bone Marrow Butter" loading="lazy">
+                        <div class="menu-item-gradient"></div>
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3 class="menu-item-name">Wagyu Beef Sirloin with Bone Marrow Butter and Triple Cooked Chips</h3>
+                            <span class="menu-item-price">£85</span>
+                        </div>
+                        <p class="menu-item-desc">A5 Wagyu, roasted bone marrow butter, hand-cut chips</p>
+                        <div class="menu-item-badges"><span class="badge badge-special">★</span></div>
+                        <div class="menu-item-line"></div>
+                    </div>
+                </div>
+
+                <div class="menu-item-card" data-category="mains">
+                    <div class="menu-item-image">
+                        <img src="assets/images/dishes/roasted-pigeon.webp" alt="Roasted Pigeon with Beetroot and Blackberry Sauce" loading="lazy">
+                        <div class="menu-item-gradient"></div>
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3 class="menu-item-name">Roasted Pigeon with Beetroot and Blackberry Sauce</h3>
+                            <span class="menu-item-price">£44</span>
+                        </div>
+                        <p class="menu-item-desc">Wood pigeon breast, roasted beetroot, blackberry reduction</p>
+                        <div class="menu-item-badges"><span class="badge badge-gf">GF</span></div>
+                        <div class="menu-item-line"></div>
+                    </div>
+                </div>
+
+
+                <!-- ••••••••••••••••••••••
+                     SEAFOOD — 4 cards
+                     data-category="seafood"
+                     •••••••••••••••••••••• -->
+
+                <div class="menu-item-card" data-category="seafood">
+                    <div class="menu-item-image">
+                        <img src="assets/images/dishes/dover-sole.webp" alt="Whole Dover Sole Meunière" loading="lazy">
+                        <div class="menu-item-gradient"></div>
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3 class="menu-item-name">Whole Dover Sole Meunière with Brown Butter and Capers</h3>
+                            <span class="menu-item-price">£68</span>
+                        </div>
+                        <p class="menu-item-desc">Line-caught Dover sole, beurre noisette, Lilliput capers</p>
+                        <div class="menu-item-badges"><span class="badge badge-gf">GF</span></div>
+                        <div class="menu-item-line"></div>
+                    </div>
+                </div>
+
+                <div class="menu-item-card" data-category="seafood">
+                    <div class="menu-item-image">
+                        <img src="assets/images/dishes/king-crab.webp" alt="King Crab with Lemon Butter and Samphire" loading="lazy">
+                        <div class="menu-item-gradient"></div>
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3 class="menu-item-name">King Crab with Lemon Butter and Samphire</h3>
+                            <span class="menu-item-price">£85</span>
+                        </div>
+                        <p class="menu-item-desc">Alaskan king crab, clarified lemon butter, sea samphire</p>
+                        <div class="menu-item-badges">
+                            <span class="badge badge-gf">GF</span>
+                            <span class="badge badge-special">★</span>
+                        </div>
+                        <div class="menu-item-line"></div>
+                    </div>
+                </div>
+
+                <div class="menu-item-card" data-category="seafood">
+                    <div class="menu-item-image">
+                        <img src="assets/images/dishes/sea-bass.webp" alt="Grilled Sea Bass with Saffron Velouté" loading="lazy">
+                        <div class="menu-item-gradient"></div>
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3 class="menu-item-name">Grilled Sea Bass with Saffron Velouté and Baby Fennel</h3>
+                            <span class="menu-item-price">£52</span>
+                        </div>
+                        <p class="menu-item-desc">Wild sea bass fillet, saffron cream sauce, braised fennel</p>
+                        <div class="menu-item-badges"><span class="badge badge-gf">GF</span></div>
+                        <div class="menu-item-line"></div>
+                    </div>
+                </div>
+
+                <div class="menu-item-card" data-category="seafood">
+                    <div class="menu-item-image">
+                        <img src="assets/images/dishes/tiger-prawns.webp" alt="Tiger Prawns with Garlic Butter and Sourdough" loading="lazy">
+                        <div class="menu-item-gradient"></div>
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3 class="menu-item-name">Tiger Prawns with Garlic Butter and Sourdough</h3>
+                            <span class="menu-item-price">£38</span>
+                        </div>
+                        <p class="menu-item-desc">Hand-peeled tiger prawns, roasted garlic butter, artisan sourdough</p>
+                        <div class="menu-item-badges"><span class="badge badge-gf">GF</span></div>
+                        <div class="menu-item-line"></div>
+                    </div>
+                </div>
+
+
+                <!-- ••••••••••••••••••••••
+                     CHEESE — 5 cards
+                     data-category="cheese"
+                     •••••••••••••••••••••• -->
+
+                <div class="menu-item-card" data-category="cheese">
+                    <div class="menu-item-image">
+                        <img src="assets/images/dishes/Comté.webp" alt="Aged Comté" loading="lazy">
+                        <div class="menu-item-gradient"></div>
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3 class="menu-item-name">Aged Comté — Franche-Comté, France</h3>
+                            <span class="menu-item-price">£14</span>
+                        </div>
+                        <p class="menu-item-desc">Nutty, rich and complex with a crystalline texture. Served with walnut bread and honey</p>
+                        <div class="menu-item-badges"><span class="badge badge-v">V</span></div>
+                        <div class="menu-item-line"></div>
+                    </div>
+                </div>
+
+                <div class="menu-item-card" data-category="cheese">
+                    <div class="menu-item-image">
+                        <img src="assets/images/dishes/Époisses CHEESE.webp" alt="‰poisses" loading="lazy">
+                        <div class="menu-item-gradient"></div>
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3 class="menu-item-name">‰poisses — Burgundy, France</h3>
+                            <span class="menu-item-price">£14</span>
+                        </div>
+                        <p class="menu-item-desc">Washed rind, intensely creamy and pungent. Served with fig jam and crackers</p>
+                        <div class="menu-item-badges"><span class="badge badge-v">V</span></div>
+                        <div class="menu-item-line"></div>
+                    </div>
+                </div>
+
+                <div class="menu-item-card" data-category="cheese">
+                    <div class="menu-item-image">
+                        <img src="assets/images/dishes/Roquefort.webp" alt="Roquefort" loading="lazy">
+                        <div class="menu-item-gradient"></div>
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3 class="menu-item-name">Roquefort — Aveyron, France</h3>
+                            <span class="menu-item-price">£14</span>
+                        </div>
+                        <p class="menu-item-desc">Bold blue veins, salty and deeply mineral. Served with candied walnuts and pear</p>
+                        <div class="menu-item-badges"><span class="badge badge-v">V</span></div>
+                        <div class="menu-item-line"></div>
+                    </div>
+                </div>
+
+                <div class="menu-item-card" data-category="cheese">
+                    <div class="menu-item-image">
+                        <img src="assets/images/dishes/Brie de Meaux CHEESE.webp" alt="Brie de Meaux" loading="lazy">
+                        <div class="menu-item-gradient"></div>
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3 class="menu-item-name">Brie de Meaux — Žle-de-France</h3>
+                            <span class="menu-item-price">£14</span>
+                        </div>
+                        <p class="menu-item-desc">Soft and buttery with a delicate mushroom rind. Served with grapes and sourdough</p>
+                        <div class="menu-item-badges"><span class="badge badge-v">V</span></div>
+                        <div class="menu-item-line"></div>
+                    </div>
+                </div>
+
+                <div class="menu-item-card" data-category="cheese">
+                    <div class="menu-item-image">
+                        <img src="assets/images/dishes/Kirkham's Lancashire.webp" alt="Kirkham's Lancashire" loading="lazy">
+                        <div class="menu-item-gradient"></div>
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3 class="menu-item-name">Kirkham's Lancashire — England</h3>
+                            <span class="menu-item-price">£14</span>
+                        </div>
+                        <p class="menu-item-desc">Crumbly, tangy and full of farmhouse character. Served with chutney and oatcakes</p>
+                        <div class="menu-item-badges"><span class="badge badge-v">V</span></div>
+                        <div class="menu-item-line"></div>
+                    </div>
+                </div>
+
+
+                <!-- ••••••••••••••••••••••
+                     DESSERTS — 8 cards
+                     data-category="desserts"
+                     •••••••••••••••••••••• -->
+
+                <div class="menu-item-card" data-category="desserts">
+                    <div class="menu-item-image">
+                        <img src="assets/images/dishes/chocolate-dessert.webp" alt="Dark Chocolate Sphere with Salted Caramel" loading="lazy">
+                        <div class="menu-item-gradient"></div>
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3 class="menu-item-name">Dark Chocolate Sphere with Salted Caramel</h3>
+                            <span class="menu-item-price">£18</span>
+                        </div>
+                        <p class="menu-item-desc">Valrhona ganache sphere, warm salted caramel, vanilla ice cream</p>
+                        <div class="menu-item-badges"><span class="badge badge-v">V</span></div>
+                        <div class="menu-item-line"></div>
+                    </div>
+                </div>
+
+                <div class="menu-item-card" data-category="desserts">
+                    <div class="menu-item-image">
+                        <img src="assets/images/dishes/lemon-tart-deconstructed.webp" alt="Deconstructed Lemon Tart with Torched Meringue" loading="lazy">
+                        <div class="menu-item-gradient"></div>
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3 class="menu-item-name">Deconstructed Lemon Tart with Torched Meringue</h3>
+                            <span class="menu-item-price">£16</span>
+                        </div>
+                        <p class="menu-item-desc">Lemon curd, Italian meringue, sablé crumble, lemon gel</p>
+                        <div class="menu-item-badges"><span class="badge badge-v">V</span></div>
+                        <div class="menu-item-line"></div>
+                    </div>
+                </div>
+
+                <div class="menu-item-card" data-category="desserts">
+                    <div class="menu-item-image">
+                        <img src="assets/images/dishes/creme-brulee.webp" alt="Vanilla Crème Brûlée with Shortbread" loading="lazy">
+                        <div class="menu-item-gradient"></div>
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3 class="menu-item-name">Vanilla Crème Brûlée with Shortbread</h3>
+                            <span class="menu-item-price">£14</span>
+                        </div>
+                        <p class="menu-item-desc">Madagascan vanilla custard, caramelised sugar crust, butter shortbread</p>
+                        <div class="menu-item-badges">
+                            <span class="badge badge-v">V</span>
+                            <span class="badge badge-gf">GF</span>
+                        </div>
+                        <div class="menu-item-line"></div>
+                    </div>
+                </div>
+
+                <div class="menu-item-card" data-category="desserts">
+                    <div class="menu-item-image">
+                        <img src="assets/images/dishes/raspberry-souffle.webp" alt="Raspberry Soufflé with Crème Anglaise" loading="lazy">
+                        <div class="menu-item-gradient"></div>
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3 class="menu-item-name">Raspberry Soufflé with Crème Anglaise</h3>
+                            <span class="menu-item-price">£18</span>
+                        </div>
+                        <p class="menu-item-desc">Fresh raspberry soufflé, warm vanilla custard sauce — please allow 20 minutes</p>
+                        <div class="menu-item-badges"><span class="badge badge-v">V</span></div>
+                        <div class="menu-item-line"></div>
+                    </div>
+                </div>
+
+                <div class="menu-item-card" data-category="desserts">
+                    <div class="menu-item-image">
+                        <img src="assets/images/dishes/pavlova.webp" alt="Mango and Passion Fruit Pavlova" loading="lazy">
+                        <div class="menu-item-gradient"></div>
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3 class="menu-item-name">Mango and Passion Fruit Pavlova</h3>
+                            <span class="menu-item-price">£15</span>
+                        </div>
+                        <p class="menu-item-desc">Crisp meringue, Chantilly cream, tropical fruit compote</p>
+                        <div class="menu-item-badges">
+                            <span class="badge badge-v">V</span>
+                            <span class="badge badge-gf">GF</span>
+                        </div>
+                        <div class="menu-item-line"></div>
+                    </div>
+                </div>
+
+                <div class="menu-item-card" data-category="desserts">
+                    <div class="menu-item-image">
+                        <img src="assets/images/dishes/chocolate-fondant.webp" alt="Warm Valrhona Chocolate Fondant" loading="lazy">
+                        <div class="menu-item-gradient"></div>
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3 class="menu-item-name">Warm Valrhona Chocolate Fondant with Vanilla Ice Cream</h3>
+                            <span class="menu-item-price">£17</span>
+                        </div>
+                        <p class="menu-item-desc">70% dark chocolate fondant, molten centre, house-churned vanilla</p>
+                        <div class="menu-item-badges"><span class="badge badge-v">V</span></div>
+                        <div class="menu-item-line"></div>
+                    </div>
+                </div>
+
+                <div class="menu-item-card" data-category="desserts">
+                    <div class="menu-item-image">
+                        <img src="assets/images/dishes/ile-flottante.webp" alt="Žle Flottante with Praline and Caramel" loading="lazy">
+                        <div class="menu-item-gradient"></div>
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3 class="menu-item-name">Žle Flottante with Praline and Caramel</h3>
+                            <span class="menu-item-price">£14</span>
+                        </div>
+                        <p class="menu-item-desc">Poached meringue, crème anglaise, hazelnut praline, caramel threads</p>
+                        <div class="menu-item-badges"><span class="badge badge-v">V</span></div>
+                        <div class="menu-item-line"></div>
+                    </div>
+                </div>
+
+                <div class="menu-item-card" data-category="desserts">
+                    <div class="menu-item-image">
+                        <img src="assets/images/dishes/seared-scallops.webp" alt="Seasonal Fruit Tart with Crème Pâtissière" loading="lazy">
+                        <div class="menu-item-gradient"></div>
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3 class="menu-item-name">Seasonal Fruit Tart with Crème Pâtissière</h3>
+                            <span class="menu-item-price">£15</span>
+                        </div>
+                        <p class="menu-item-desc">Buttery pastry shell, vanilla pastry cream, seasonal glazed fruits</p>
+                        <div class="menu-item-badges"><span class="badge badge-v">V</span></div>
+                        <div class="menu-item-line"></div>
+                    </div>
+                </div>
+
+
+                <!-- ••••••••••••••••••••••
+                     DRINKS — 8 cards
+                     data-category="drinks"
+                     •••••••••••••••••••••• -->
+
+                <div class="menu-item-card" data-category="drinks">
+                    <div class="menu-item-image">
+                        <img src="assets/images/dishes/martini.webp" alt="Lumière Signature Cocktail" loading="lazy">
+                        <div class="menu-item-gradient"></div>
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3 class="menu-item-name">Lumière Signature — Champagne, Elderflower and Gold Leaf</h3>
+                            <span class="menu-item-price">£22</span>
+                        </div>
+                        <p class="menu-item-desc">House Champagne, elderflower liqueur, edible 24k gold leaf garnish</p>
+                        <div class="menu-item-badges"><span class="badge badge-special">★</span></div>
+                        <div class="menu-item-line"></div>
+                    </div>
+                </div>
+
+                <div class="menu-item-card" data-category="drinks">
+                    <div class="menu-item-image">
+                        <img src="assets/images/dishes/old-fashioned.webp" alt="Black Rose Cocktail" loading="lazy">
+                        <div class="menu-item-gradient"></div>
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3 class="menu-item-name">Black Rose — Blackberry, Rose and Gin</h3>
+                            <span class="menu-item-price">£18</span>
+                        </div>
+                        <p class="menu-item-desc">Hendricks gin, fresh blackberry, rose syrup, lemon, egg white foam</p>
+                        <div class="menu-item-badges"><span class="badge badge-v">V</span></div>
+                        <div class="menu-item-line"></div>
+                    </div>
+                </div>
+
+                <div class="menu-item-card" data-category="drinks">
+                    <div class="menu-item-image">
+                        <img src="assets/images/dishes/champagne.webp" alt="Moët and Chandon Brut Imperial" loading="lazy">
+                        <div class="menu-item-gradient"></div>
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3 class="menu-item-name">Moët and Chandon Brut Imperial</h3>
+                            <span class="menu-item-price">£18 / £85</span>
+                        </div>
+                        <p class="menu-item-desc">Champagne, France — Fresh and vibrant with green apple and citrus notes</p>
+                        <div class="menu-item-badges"><span class="badge badge-v">V</span></div>
+                        <div class="menu-item-line"></div>
+                    </div>
+                </div>
+
+                <div class="menu-item-card" data-category="drinks">
+                    <div class="menu-item-image">
+                        <img src="assets/images/dishes/red-wine.webp" alt="Château Margaux Bordeaux" loading="lazy">
+                        <div class="menu-item-gradient"></div>
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3 class="menu-item-name">Château Margaux Bordeaux</h3>
+                            <span class="menu-item-price">£32 / £185</span>
+                        </div>
+                        <p class="menu-item-desc">Bordeaux, France — Elegant tannins, blackcurrant, cedar and violet</p>
+                        <div class="menu-item-badges"><span class="badge badge-v">V</span></div>
+                        <div class="menu-item-line"></div>
+                    </div>
+                </div>
+
+                <div class="menu-item-card" data-category="drinks">
+                    <div class="menu-item-image">
+                        <img src="assets/images/dishes/white-wine.webp" alt="Puligny Montrachet Premier Cru" loading="lazy">
+                        <div class="menu-item-gradient"></div>
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3 class="menu-item-name">Puligny Montrachet Premier Cru</h3>
+                            <span class="menu-item-price">£24 / £115</span>
+                        </div>
+                        <p class="menu-item-desc">Burgundy, France — Mineral and precise with stone fruit and hazelnut</p>
+                        <div class="menu-item-badges"><span class="badge badge-v">V</span></div>
+                        <div class="menu-item-line"></div>
+                    </div>
+                </div>
+
+                <div class="menu-item-card" data-category="drinks">
+                    <div class="menu-item-image">
+                        <img src="assets/images/dishes/old-fashioned.webp" alt="Gold Rush Cocktail" loading="lazy">
+                        <div class="menu-item-gradient"></div>
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3 class="menu-item-name">Gold Rush — Bourbon, Honey and Lemon</h3>
+                            <span class="menu-item-price">£18</span>
+                        </div>
+                        <p class="menu-item-desc">Woodford Reserve bourbon, house honey syrup, fresh lemon juice</p>
+                        <div class="menu-item-badges"><span class="badge badge-v">V</span></div>
+                        <div class="menu-item-line"></div>
+                    </div>
+                </div>
+
+                <div class="menu-item-card" data-category="drinks">
+                    <div class="menu-item-image">
+                        <img src="assets/images/dishes/herbal-tea.webp" alt="Lumière Botanical Blend" loading="lazy">
+                        <div class="menu-item-gradient"></div>
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3 class="menu-item-name">Lumière Botanical Blend — Non Alcoholic</h3>
+                            <span class="menu-item-price">£12</span>
+                        </div>
+                        <p class="menu-item-desc">House-made floral infusion, elderflower, cucumber, rose and mint</p>
+                        <div class="menu-item-badges">
+                            <span class="badge badge-v">V</span>
+                            <span class="badge badge-ve">VE</span>
+                        </div>
+                        <div class="menu-item-line"></div>
+                    </div>
+                </div>
+
+                <div class="menu-item-card" data-category="drinks">
+                    <div class="menu-item-image">
+                        <img src="assets/images/dishes/champagne.webp" alt="Sauternes Château d'Yquem" loading="lazy">
+                        <div class="menu-item-gradient"></div>
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3 class="menu-item-name">Sauternes Château d'Yquem — Dessert Wine</h3>
+                            <span class="menu-item-price">£28 / £145</span>
+                        </div>
+                        <p class="menu-item-desc">Bordeaux, France — Honeyed apricot, marmalade, extraordinary length</p>
+                        <div class="menu-item-badges">
+                            <span class="badge badge-v">V</span>
+                            <span class="badge badge-special">★</span>
+                        </div>
+                        <div class="menu-item-line"></div>
+                    </div>
+                </div>
+
+
+                <!-- ••••••••••••••••••••••
+                     TASTING MENUS — 3 cards
+                     data-category="tasting"
+                     •••••••••••••••••••••• -->
+
+                <div class="menu-item-card menu-item-card--tasting" data-category="tasting">
+                    <div class="menu-item-image">
+                        <img src="assets/images/dishes/tasting-menu-seven.webp" alt="The Lumière Experience" loading="lazy">
+                        <div class="menu-item-gradient"></div>
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3 class="menu-item-name">The Lumière Experience — 7 Courses</h3>
+                            <span class="menu-item-price">£145 pp</span>
+                        </div>
+                        <p class="menu-item-desc">Amuse Bouche · Seared Scallops · Foie Gras Torchon · Palate Cleanser · Dry Aged Beef Fillet · Artisan Cheese · Dark Chocolate Sphere</p>
+                        <div class="menu-item-badges">
+                            <span class="badge badge-special">★ Signature</span>
+                        </div>
+                        <div class="menu-item-line"></div>
+                    </div>
+                </div>
+
+                <div class="menu-item-card menu-item-card--tasting" data-category="tasting">
+                    <div class="menu-item-image">
+                        <img src="assets/images/dishes/tasting-menu-chefs.webp" alt="The Chef's Prestige Menu" loading="lazy">
+                        <div class="menu-item-gradient"></div>
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3 class="menu-item-name">The Chef's Prestige Menu — 10 Courses</h3>
+                            <span class="menu-item-price">£210 pp</span>
+                        </div>
+                        <p class="menu-item-desc">Three Amuse Bouche · Caviar · Foie Gras · Lobster Bisque · Tuna Tartare · Champagne Granita · Wagyu Sirloin · Roasted Lobster · Cheese · Lemon Tart</p>
+                        <div class="menu-item-badges">
+                            <span class="badge badge-special">★ Most Popular</span>
+                        </div>
+                        <div class="menu-item-line"></div>
+                    </div>
+                </div>
+
+                <div class="menu-item-card menu-item-card--tasting" data-category="tasting">
+                    <div class="menu-item-image">
+                        <img src="assets/images/dishes/tasting-menu-vegetarian.webp" alt="The Vegetarian Journey" loading="lazy">
+                        <div class="menu-item-gradient"></div>
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3 class="menu-item-name">The Vegetarian Journey — 6 Courses</h3>
+                            <span class="menu-item-price">£115 pp</span>
+                        </div>
+                        <p class="menu-item-desc">Amuse Bouche · Burrata · Wild Mushroom Velouté · Black Truffle Risotto · Artisan Cheese · Vanilla Crème Brûlée</p>
+                        <div class="menu-item-badges">
+                            <span class="badge badge-v">V</span>
+                        </div>
+                        <div class="menu-item-line"></div>
+                    </div>
+                </div>
+
+
+            </div>
+            <!-- END menu-items-grid -->
+
+            <!-- Pagination controls — injected by JS -->
+            <div class="menu-pagination-wrapper" id="menu-pagination-wrapper"></div>
+
+        </div>
+    </div>
+    <!-- END menu-content-area -->
+
+
+    <!-- •••••••••••••••••••••••••••••••••••••••••••••••
+         ALLERGEN NOTICE
+         ••••••••••••••••••••••••••••••••••••••••••••••• -->
+    <section class="allergen-section" id="allergen-section">
+        <div class="container">
+            <div class="allergen-inner">
+                <div class="allergen-top-line"></div>
+                <!-- Ÿ” EDIT: Update allergen text to match your requirements -->
+                <p class="allergen-heading">DIETARY REQUIREMENTS AND ALLERGENS</p>
+                <p class="allergen-text">Our team is happy to accommodate dietary requirements and allergies with advance notice. Please inform your server of any requirements before ordering. All our dishes are prepared in a kitchen that handles nuts, gluten, dairy and shellfish.</p>
+                <div class="allergen-badges">
+                    <div class="allergen-badge-item">
+                        <span class="badge badge-v">V</span>
+                        <span class="allergen-badge-label">Vegetarian</span>
+                    </div>
+                    <div class="allergen-badge-item">
+                        <span class="badge badge-ve">VE</span>
+                        <span class="allergen-badge-label">Vegan</span>
+                    </div>
+                    <div class="allergen-badge-item">
+                        <span class="badge badge-gf">GF</span>
+                        <span class="allergen-badge-label">Gluten Free</span>
+                    </div>
+                    <div class="allergen-badge-item">
+                        <span class="badge badge-special">★</span>
+                        <span class="allergen-badge-label">Chef's Special</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- •••••••••••••••••••••••••••••••••••••••••••••••
+         RESERVATION CTA — loaded via component loader
+         ••••••••••••••••••••••••••••••••••••••••••••••• -->
+    <div id="reservation-cta-container"></div>
+
+
+    <!-- Footer -->
+    <div id="footer-container"></div>
+
+    <!-- Back to Top -->
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m18 15-6-6-6 6"/>
+        </svg>
+    </button>
+
+
+    <!-- GSAP + ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <!-- Lenis Smooth Scroll -->
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.42/bundled/lenis.min.js"></script>
+
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- CountUp.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/2.8.0/countUp.umd.min.js"></script>
+
+    <!-- Core JS -->
+    <script src="assets/js/core/component-loader.js"></script>
+    <script src="assets/js/core/cursor.js"></script>
+    <script src="assets/js/core/loader.js"></script>
+    <script src="assets/js/core/navbar.js"></script>
+    <script src="assets/js/core/smooth-scroll.js"></script>
+
+    <!-- Component JS -->
+    <script src="assets/js/components/counter.js"></script>
+    <script src="assets/js/components/form-handler.js"></script>
+    <script src="assets/js/components/animations-init.js"></script>
+
+    <!-- Page JS -->
+    <script src="assets/js/pages/menu.js"></script>
+
+    <!-- Main JS -->
+    <script src="assets/js/main.js"></script>
+
+</body>
+</html>
+

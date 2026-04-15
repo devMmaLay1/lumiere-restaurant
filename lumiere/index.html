@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- 🔧 EDIT: Update meta description with your restaurant's description -->
+    <meta name="description" content="Lumière – Fine dining luxury restaurant in Mayfair, London. Exquisite cuisine, unforgettable ambience, award-winning chefs.">
+    
+    <!-- 🔧 EDIT: Replace "Lumière" with your restaurant name -->
+    <title>Lumière – Fine Dining Restaurant</title>
+    
+    <!-- Preload critical hero image -->
+    <link rel="preload" as="image" href="assets/images/hero/hero-home.png">
+    
+    <!-- 🔧 EDIT: Replace with your preferred Google Fonts -->
+    <!-- Current fonts: Cormorant Garamond (headings), Playfair Display (subheadings), DM Sans (body) -->
+    <!-- Get new fonts from: https://fonts.google.com -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Playfair+Display:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Swiper.js CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    
+    <!-- AOS - Scroll Reveal Animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/utilities.css">
+    <link rel="stylesheet" href="assets/css/pages/home.css">
+</head>
+<body>
+    <!-- Page Loader -->
+    <div id="page-loader">
+        <div class="loader-content">
+            <img src="assets/images/brand/logo.webp" alt="Lumière logo" class="loader-logo">
+            <div class="loader-bar"></div>
+        </div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor"></div>
+    <div class="custom-cursor-dot"></div>
+
+    <!-- Navbar Container - Loaded via JavaScript -->
+    <div id="navbar-container"></div>
+
+
+    <!-- ═══════════════════════════════════════════════════
+         SECTION 1 — HERO
+         Full viewport, parallax background, logo + tagline + CTAs
+         ═══════════════════════════════════════════════════ -->
+    <section class="hero-section" id="hero">
+        <!-- 🔧 EDIT: Replace hero background image (recommended size: 1920x1080px) -->
+        <div class="hero-bg" style="background-image: url('assets/images/hero/hero-home.png')"></div>
+        <div class="hero-overlay"></div>
+        
+        <div class="hero-content">
+            <!-- 🔧 EDIT: Replace logo image (keep same filename or update all references) -->
+            <img src="assets/images/brand/logo.webp" alt="Lumière" class="hero-logo" id="hero-logo">
+            
+            <!-- 🔧 EDIT: Update tagline to match your restaurant's message -->
+            <p class="hero-tagline" id="hero-tagline">Where culinary art meets timeless elegance</p>
+            
+            <div class="hero-buttons" id="hero-buttons">
+                <!-- 🔧 EDIT: Update button text if needed -->
+                <a href="reservations.html" class="btn btn-primary">Reserve a Table</a>
+                <a href="menu.html" class="hero-explore-link">Explore Menu <span>→</span></a>
+            </div>
+        </div>
+        
+        <!-- Scroll indicator -->
+        <div class="scroll-indicator" id="scroll-indicator">
+            <span>Scroll to explore</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════
+         SECTION 2 — BRAND STATEMENT
+         Pure typography, no images, maximum negative space
+         ═══════════════════════════════════════════════════ -->
+    <section class="brand-statement-section" id="brand-statement">
+        <div class="container">
+            <div class="brand-statement-inner">
+                <div class="brand-ornament" id="brand-ornament"></div>
+                
+                <!-- 🔧 EDIT: Replace with your restaurant's philosophy or brand statement -->
+                <p class="brand-quote" id="brand-quote">
+                    We believe that dining is not simply nourishment. It is memory, crafted through flavour, light and time.
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════
+         SECTION 3 — SIGNATURE DISHES
+         Three dish cards with hover zoom + parallax images
+         🔧 EDIT: Update section label and heading below
+         ═══════════════════════════════════════════════════ -->
+    <section class="signatures-section" id="signatures">
+        <div class="container">
+            <div class="section-header text-center">
+                <!-- 🔧 EDIT: Small label above heading -->
+                <p class="section-label">From Our Kitchen</p>
+                
+                <!-- 🔧 EDIT: Main section heading -->
+                <h2 class="signatures-heading" id="signatures-heading">Our Signatures</h2>
+            </div>
+
+            <div class="signatures-grid" id="signatures-grid">
+                <!-- 🔧 EDIT: Card 1 - Replace image, dish name, and description -->
+                <a href="menu.html" class="signature-card" id="sig-card-1">
+                    <div class="signature-card-image">
+                        <!-- Replace with your dish image (recommended: 600x400px) -->
+                        <img src="assets/images/dishes/wagyu-beef.webp" alt="Wagyu Beef Tenderloin" class="sig-img" loading="lazy">
+                        <div class="signature-card-gradient"></div>
+                    </div>
+                    <div class="signature-card-content">
+                        <!-- Update dish name -->
+                        <h3 class="signature-dish-name">Wagyu Beef Tenderloin</h3>
+                        <!-- Update dish description -->
+                        <p class="signature-dish-desc">Black truffle jus, fondant potato, seasonal vegetables</p>
+                        <div class="signature-card-line"></div>
+                    </div>
+                </a>
+
+                <!-- 🔧 EDIT: Card 2 - Replace image, dish name, and description -->
+                <a href="menu.html" class="signature-card" id="sig-card-2">
+                    <div class="signature-card-image">
+                        <img src="assets/images/dishes/dover-sole.webp" alt="Pan-Seared Dover Sole" class="sig-img" loading="lazy">
+                        <div class="signature-card-gradient"></div>
+                    </div>
+                    <div class="signature-card-content">
+                        <h3 class="signature-dish-name">Pan-Seared Dover Sole</h3>
+                        <p class="signature-dish-desc">Beurre noisette, capers, heritage lemon</p>
+                        <div class="signature-card-line"></div>
+                    </div>
+                </a>
+
+                <!-- 🔧 EDIT: Card 3 - Replace image, dish name, and description -->
+                <a href="menu.html" class="signature-card" id="sig-card-3">
+                    <div class="signature-card-image">
+                        <img src="assets/images/dishes/chocolate-dessert.webp" alt="Chocolate Noir Soufflé" class="sig-img" loading="lazy">
+                        <div class="signature-card-gradient"></div>
+                    </div>
+                    <div class="signature-card-content">
+                        <h3 class="signature-dish-name">Chocolate Noir Soufflé</h3>
+                        <p class="signature-dish-desc">Valrhona ganache, gold leaf, vanilla crème</p>
+                        <div class="signature-card-line"></div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════
+         SECTION 4 — THE EXPERIENCE
+         Three pillars: Ambience, Cuisine, Service
+         🔧 EDIT: Update section heading and pillar content below
+         ═══════════════════════════════════════════════════ -->
+    <section class="experience-section" id="experience">
+        <div class="container">
+            <div class="section-header text-center">
+                <!-- 🔧 EDIT: Update section label -->
+                <p class="section-label">The Lumière Difference</p>
+                
+                <!-- 🔧 EDIT: Update section heading -->
+                <h2 class="experience-heading" id="experience-heading">The Experience</h2>
+            </div>
+
+            <div class="experience-grid" id="experience-grid">
+                <!-- 🔧 EDIT: Pillar 1 - Update icon, title, and description -->
+                <!-- To change icon: Visit https://lucide.dev and copy SVG code -->
+                <div class="experience-pillar" id="exp-pillar-1">
+                    <div class="pillar-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"/>
+                            <polyline points="12 6 12 12 16 14"/>
+                        </svg>
+                    </div>
+                    <h3 class="pillar-title">The Ambience</h3>
+                    <p class="pillar-text">Every detail of our interior has been considered — from the flicker of candlelight on Italian marble to the precise warmth of our lighting at each hour of the evening.</p>
+                </div>
+
+                <!-- 🔧 EDIT: Pillar 2 - Update icon, title, and description -->
+                <div class="experience-pillar" id="exp-pillar-2">
+                    <div class="pillar-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="8" r="6"/>
+                            <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/>
+                        </svg>
+                    </div>
+                    <h3 class="pillar-title">The Cuisine</h3>
+                    <p class="pillar-text">Ingredients sourced from artisan producers across Europe, prepared with techniques refined over decades. Each dish tells a story of provenance and craft.</p>
+                </div>
+
+                <!-- 🔧 EDIT: Pillar 3 - Update icon, title, and description -->
+                <div class="experience-pillar" id="exp-pillar-3">
+                    <div class="pillar-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                        </svg>
+                    </div>
+                    <h3 class="pillar-title">The Service</h3>
+                    <p class="pillar-text">Attentive without intrusion. Our team anticipates needs before they arise, ensuring every guest feels both cared for and entirely at ease.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════
+         SECTION 5 — CHEF FEATURE
+         Split layout: portrait left, bio right
+         🔧 EDIT: Update chef image and bio content below
+         ═══════════════════════════════════════════════════ -->
+    <section class="chef-section" id="chef">
+        <div class="chef-layout">
+            <!-- Left: Chef Portrait -->
+            <div class="chef-portrait-wrapper">
+                <div class="chef-portrait-inner" id="chef-portrait">
+                    <!-- 🔧 EDIT: Replace with your chef's portrait (recommended: 800x1000px) -->
+                    <img src="assets/images/team/chef-portrait.webp" alt="Chef Étienne Marchand" class="chef-portrait-img" loading="lazy">
+                </div>
+            </div>
+
+            <!-- Right: Chef Bio -->
+            <div class="chef-bio" id="chef-bio">
+                <!-- 🔧 EDIT: Update section label -->
+                <p class="section-label" id="chef-label">Meet The Chef</p>
+                
+                <!-- 🔧 EDIT: Update chef's name -->
+                <h2 class="chef-name" id="chef-name">Étienne Marchand</h2>
+                
+                <!-- 🔧 EDIT: Update chef's quote -->
+                <blockquote class="chef-quote" id="chef-quote">
+                    "Every plate that leaves my kitchen carries a piece of my story."
+                </blockquote>
+                
+                <!-- 🔧 EDIT: Update chef's biography (2-3 paragraphs recommended) -->
+                <p class="chef-bio-text">Born in Lyon and trained across the great kitchens of Paris, Chef Marchand brings three decades of passion to every dish at Lumière. His philosophy is simple — honour the ingredient, respect the tradition, and never stop evolving.</p>
+                <p class="chef-bio-text">At Lumière, he has assembled a brigade of exceptional talent united by a shared belief that fine dining should be both extraordinary and deeply personal.</p>
+                
+                <div class="chef-credentials-line"></div>
+                
+                <!-- 🔧 EDIT: Update chef's credentials and achievements -->
+                <p class="chef-credentials" id="chef-credentials">Michelin Star 2019 · Le Cordon Bleu Paris · 30 Years Experience</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════
+         SECTION 6 — RESERVATION CTA BANNER
+         Full-width atmospheric image + centred CTA
+         🔧 EDIT: Update background image and CTA text below
+         ═══════════════════════════════════════════════════ -->
+    <section class="cta-banner-section" id="cta-banner">
+        <!-- 🔧 EDIT: Replace background image (recommended: 1920x800px) -->
+        <div class="cta-banner-bg" style="background-image: url('assets/images/interior/dining-room.webp')"></div>
+        <div class="cta-banner-overlay"></div>
+        
+        <div class="cta-banner-content">
+            <div class="cta-ornament">✦</div>
+            
+            <!-- 🔧 EDIT: Update CTA heading -->
+            <h2 class="cta-banner-heading" id="cta-heading">Reserve Your Evening</h2>
+            
+            <!-- 🔧 EDIT: Update CTA description text -->
+            <p class="cta-banner-text">An evening at Lumière is more than a meal — it is an occasion to remember.</p>
+            
+            <!-- 🔧 EDIT: Update button text if needed -->
+            <a href="reservations.html" class="btn btn-primary cta-banner-btn" id="cta-btn">Reserve a Table</a>
+        </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════
+         SECTION 7 — TESTIMONIALS
+         Swiper.js slider with guest reviews
+         🔧 EDIT: Add, remove, or update testimonials below
+         ═══════════════════════════════════════════════════ -->
+    <section class="testimonials-section" id="testimonials">
+        <div class="container">
+            <div class="section-header text-center">
+                <!-- 🔧 EDIT: Update section label -->
+                <p class="section-label">Guest Experiences</p>
+                
+                <!-- 🔧 EDIT: Update section heading -->
+                <h2 class="testimonials-heading" id="testimonials-heading">What Our Guests Say</h2>
+            </div>
+
+            <div class="testimonials-slider-wrapper" id="testimonials-slider">
+                <div class="swiper testimonials-swiper">
+                    <div class="swiper-wrapper">
+                        <!-- 🔧 EDIT: Testimonial 1 - Update quote, name, and occasion -->
+                        <div class="swiper-slide">
+                            <div class="testimonial-card">
+                                <div class="testimonial-quote-mark">"</div>
+                                <!-- Update testimonial text -->
+                                <p class="testimonial-text">An absolutely transcendent evening. From the moment we walked in until the last course, every detail was impeccable. This is not just a restaurant — it is an experience that stays with you.</p>
+                                <div class="testimonial-stars">★★★★★</div>
+                                <!-- Update guest name -->
+                                <p class="testimonial-name">Alexandra & James Whitmore</p>
+                                <!-- Update occasion -->
+                                <p class="testimonial-occasion">Anniversary Dinner</p>
+                            </div>
+                        </div>
+
+                        <!-- 🔧 EDIT: Testimonial 2 -->
+                        <div class="swiper-slide">
+                            <div class="testimonial-card">
+                                <div class="testimonial-quote-mark">"</div>
+                                <p class="testimonial-text">The tasting menu was a masterpiece. Each course told a story and the wine pairings were inspired. Chef Marchand is an artist. We have already booked our return visit.</p>
+                                <div class="testimonial-stars">★★★★★</div>
+                                <p class="testimonial-name">David & Sarah Chen</p>
+                                <p class="testimonial-occasion">Birthday Celebration</p>
+                            </div>
+                        </div>
+
+                        <!-- 🔧 EDIT: Testimonial 3 -->
+                        <div class="swiper-slide">
+                            <div class="testimonial-card">
+                                <div class="testimonial-quote-mark">"</div>
+                                <p class="testimonial-text">The service was beyond anything I have experienced in London. Warm, intuitive, and personal without being intrusive. The Dover Sole was the finest I have ever tasted.</p>
+                                <div class="testimonial-stars">★★★★★</div>
+                                <p class="testimonial-name">Elizabeth Hargrove</p>
+                                <p class="testimonial-occasion">Private Dining</p>
+                            </div>
+                        </div>
+
+                        <!-- 🔧 EDIT: Testimonial 4 -->
+                        <div class="swiper-slide">
+                            <div class="testimonial-card">
+                                <div class="testimonial-quote-mark">"</div>
+                                <p class="testimonial-text">Simply the finest dining experience in Mayfair. The ambience, the wine list, the attention to detail in every single plate — Lumière sets a standard that few can match.</p>
+                                <div class="testimonial-stars">★★★★★</div>
+                                <p class="testimonial-name">Marcus & Isabelle Laurent</p>
+                                <p class="testimonial-occasion">Business Dinner</p>
+                            </div>
+                        </div>
+                        
+                        <!-- 🔧 TO ADD MORE: Copy a slide above and paste here -->
+                    </div>
+
+                    <!-- Navigation -->
+                    <div class="swiper-pagination testimonials-pagination"></div>
+                    <div class="swiper-button-prev testimonials-prev"></div>
+                    <div class="swiper-button-next testimonials-next"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════
+         SECTION 8 — GALLERY PREVIEW
+         2×3 seamless image grid
+         🔧 EDIT: Update section heading and gallery images below
+         ═══════════════════════════════════════════════════ -->
+    <section class="gallery-section" id="gallery-preview">
+        <div class="container">
+            <div class="section-header text-center">
+                <!-- 🔧 EDIT: Update section label -->
+                <p class="section-label">Our World</p>
+                
+                <!-- 🔧 EDIT: Update section heading -->
+                <h2 class="gallery-heading" id="gallery-heading">Captured Moments</h2>
+            </div>
+
+            <div class="gallery-grid" id="gallery-grid">
+                <!-- 🔧 EDIT: Gallery Image 1 - Replace src and alt text -->
+                <a href="gallery.html" class="gallery-cell" id="gal-1">
+                    <img src="assets/images/dishes/tasting-menu.webp" alt="Fine dining plate" loading="lazy">
+                    <div class="gallery-cell-overlay">
+                        <span class="gallery-plus">+</span>
+                    </div>
+                </a>
+                
+                <!-- 🔧 EDIT: Gallery Image 2 -->
+                <a href="gallery.html" class="gallery-cell" id="gal-2">
+                    <img src="assets/images/interior/dining-room.webp" alt="Restaurant interior" loading="lazy">
+                    <div class="gallery-cell-overlay">
+                        <span class="gallery-plus">+</span>
+                    </div>
+                </a>
+                
+                <!-- 🔧 EDIT: Gallery Image 3 -->
+                <a href="gallery.html" class="gallery-cell" id="gal-3">
+                    <img src="assets/images/dishes/red-wine.webp" alt="Wine glass" loading="lazy">
+                    <div class="gallery-cell-overlay">
+                        <span class="gallery-plus">+</span>
+                    </div>
+                </a>
+                
+                <!-- 🔧 EDIT: Gallery Image 4 -->
+                <a href="gallery.html" class="gallery-cell" id="gal-4">
+                    <img src="assets/images/gallery/candlelit-table.webp" alt="Candlelit table" loading="lazy">
+                    <div class="gallery-cell-overlay">
+                        <span class="gallery-plus">+</span>
+                    </div>
+                </a>
+                
+                <!-- 🔧 EDIT: Gallery Image 5 -->
+                <a href="gallery.html" class="gallery-cell" id="gal-5">
+                    <img src="assets/images/dishes/dover-sole.webp" alt="Plated cuisine" loading="lazy">
+                    <div class="gallery-cell-overlay">
+                        <span class="gallery-plus">+</span>
+                    </div>
+                </a>
+                
+                <!-- 🔧 EDIT: Gallery Image 6 -->
+                <a href="gallery.html" class="gallery-cell" id="gal-6">
+                    <img src="assets/images/dishes/chocolate-dessert.webp" alt="Dessert detail" loading="lazy">
+                    <div class="gallery-cell-overlay">
+                        <span class="gallery-plus">+</span>
+                    </div>
+                </a>
+            </div>
+
+            <div class="gallery-cta">
+                <!-- 🔧 EDIT: Update link text if needed -->
+                <a href="gallery.html" class="gallery-link">View Full Gallery <span>→</span></a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer Container - Loaded via JavaScript -->
+    <div id="footer-container"></div>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m18 15-6-6-6 6"/>
+        </svg>
+    </button>
+
+    <!-- GSAP + ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    
+    <!-- Swiper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
+    <!-- Lenis Smooth Scroll -->
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.42/bundled/lenis.min.js"></script>
+    
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Custom JS - Core -->
+    <script src="assets/js/core/component-loader.js"></script>
+    <script src="assets/js/core/cursor.js"></script>
+    <script src="assets/js/core/loader.js"></script>
+    <script src="assets/js/core/navbar.js"></script>
+    <script src="assets/js/core/smooth-scroll.js"></script>
+    
+    <!-- Custom JS - Components -->
+    <script src="assets/js/components/counter.js"></script>
+    <script src="assets/js/components/testimonial-slider.js"></script>
+    <script src="assets/js/components/form-handler.js"></script>
+    <script src="assets/js/components/animations-init.js"></script>
+    
+    <!-- Custom JS - Pages -->
+    <script src="assets/js/pages/home.js"></script>
+    
+    <!-- Custom JS - Main -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

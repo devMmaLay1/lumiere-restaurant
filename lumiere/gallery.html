@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Step inside Lumière. Browse our gallery of dishes, interiors, kitchen moments and private dining events — a visual portrait of London's most intimate fine dining experience.">
+
+    <title>Lumière — Gallery | Fine Dining Mayfair</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Playfair+Display:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/utilities.css">
+    <link rel="stylesheet" href="assets/css/pages/gallery.css">
+</head>
+<body>
+
+    <!-- Page Loader -->
+    <div id="page-loader">
+        <div class="loader-content">
+            <img src="assets/images/brand/logo.webp" alt="Lumière logo" class="loader-logo">
+            <div class="loader-bar"></div>
+        </div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor"></div>
+    <div class="custom-cursor-dot"></div>
+
+    <!-- Navbar -->
+    <div id="navbar-container"></div>
+
+
+    <!-- •••••••••••••••••••••••••••••••••••••••••••
+         SECTION 1 — PAGE HERO
+         ••••••••••••••••••••••••••••••••••••••••••• -->
+    <section class="gal-hero" id="gal-hero">
+        <div class="gal-hero-bg" style="background-image: url('assets/images/hero/hero-gallery.webp')"></div>
+        <div class="gal-hero-overlay"></div>
+        <div class="gal-hero-content">
+            <nav class="gal-breadcrumb" aria-label="Breadcrumb">
+                <a href="index.html" class="breadcrumb-link">Home</a>
+                <span class="breadcrumb-separator">→’</span>
+                <span class="breadcrumb-current">Gallery</span>
+            </nav>
+            <p class="gal-hero-label" id="gal-hero-label">THE GALLERY</p>
+            <h1 class="gal-hero-heading" id="gal-hero-heading">A Visual Portrait of Lumière</h1>
+            <p class="gal-hero-sub" id="gal-hero-sub">Every image tells the story of a meal, a moment, or the hands that made it.</p>
+            <div class="gal-hero-line" id="gal-hero-line"></div>
+        </div>
+    </section>
+
+
+    <!-- •••••••••••••••••••••••••••••••••••••••••••
+         SECTION 2 — FILTER BAR
+         Uses same horizontal-scroll pattern as menu
+         ••••••••••••••••••••••••••••••••••••••••••• -->
+    <div class="gal-filter-wrap">
+        <div class="gal-filter-bar" id="gal-filter-bar">
+            <div class="container">
+                <div class="gal-filter-inner" id="gal-filter-inner">
+                    <button class="gal-filter-tab active" data-filter="all">All</button>
+                    <button class="gal-filter-tab" data-filter="cuisine">Cuisine</button>
+                    <button class="gal-filter-tab" data-filter="interiors">Interiors</button>
+                    <button class="gal-filter-tab" data-filter="kitchen">Kitchen</button>
+                    <button class="gal-filter-tab" data-filter="events">Events</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- •••••••••••••••••••••••••••••••••••••••••••
+         SECTION 3 — GALLERY GRID
+         CSS-columns masonry layout
+         ••••••••••••••••••••••••••••••••••••••••••• -->
+    <section class="gal-grid-section" id="gal-grid-section">
+        <div class="container">
+            <div class="gal-grid" id="gal-grid">
+
+                <!-- CUISINE -->
+                <div class="gal-item" data-category="cuisine">
+                    <img src="assets/images/dishes/wagyu-beef.webp" alt="Amuse bouche — celeriac velouté" loading="lazy">
+                    <div class="gal-overlay">
+                        <i data-lucide="zoom-in" class="gal-zoom-icon"></i>
+                        <span class="gal-caption">Amuse bouche — celeriac velouté</span>
+                    </div>
+                </div>
+
+                <div class="gal-item" data-category="interiors">
+                    <img src="assets/images/interior/dining-room-01.webp" alt="The dining room — set for service" loading="lazy">
+                    <div class="gal-overlay">
+                        <i data-lucide="zoom-in" class="gal-zoom-icon"></i>
+                        <span class="gal-caption">The dining room — set for service</span>
+                    </div>
+                </div>
+
+                <div class="gal-item" data-category="cuisine">
+                    <img src="assets/images/dishes/dry-aged-beef.webp" alt="Dry-aged beef, bone marrow, shallot" loading="lazy">
+                    <div class="gal-overlay">
+                        <i data-lucide="zoom-in" class="gal-zoom-icon"></i>
+                        <span class="gal-caption">Dry-aged beef, bone marrow, shallot</span>
+                    </div>
+                </div>
+
+                <div class="gal-item" data-category="kitchen">
+                    <img src="assets/images/team/chef-portrait.webp" alt="Chef Thomas Renard at the pass" loading="lazy">
+                    <div class="gal-overlay">
+                        <i data-lucide="zoom-in" class="gal-zoom-icon"></i>
+                        <span class="gal-caption">Chef Thomas Renard at the pass</span>
+                    </div>
+                </div>
+
+                <div class="gal-item" data-category="interiors">
+                    <img src="assets/images/gallery/candlelit-table.webp" alt="Table for two — candlelit" loading="lazy">
+                    <div class="gal-overlay">
+                        <i data-lucide="zoom-in" class="gal-zoom-icon"></i>
+                        <span class="gal-caption">Table for two — candlelit</span>
+                    </div>
+                </div>
+
+                <div class="gal-item" data-category="cuisine">
+                    <img src="assets/images/dishes/chocolate-dessert.webp" alt="Valrhona chocolate, salted caramel, hazelnut" loading="lazy">
+                    <div class="gal-overlay">
+                        <i data-lucide="zoom-in" class="gal-zoom-icon"></i>
+                        <span class="gal-caption">Valrhona chocolate, salted caramel, hazelnut</span>
+                    </div>
+                </div>
+
+                <div class="gal-item" data-category="cuisine">
+                    <img src="assets/images/gallery/scallop-closeup.webp" alt="Hand-dived scallop, cauliflower, roe butter" loading="lazy">
+                    <div class="gal-overlay">
+                        <i data-lucide="zoom-in" class="gal-zoom-icon"></i>
+                        <span class="gal-caption">Hand-dived scallop, cauliflower, roe butter</span>
+                    </div>
+                </div>
+
+                <div class="gal-item" data-category="interiors">
+                    <img src="assets/images/gallery/reception-bar.webp" alt="The reception and bar" loading="lazy">
+                    <div class="gal-overlay">
+                        <i data-lucide="zoom-in" class="gal-zoom-icon"></i>
+                        <span class="gal-caption">The reception and bar</span>
+                    </div>
+                </div>
+
+                <div class="gal-item" data-category="kitchen">
+                    <img src="assets/images/gallery/kitchen-brigade.webp" alt="The kitchen brigade — Friday service" loading="lazy">
+                    <div class="gal-overlay">
+                        <i data-lucide="zoom-in" class="gal-zoom-icon"></i>
+                        <span class="gal-caption">The kitchen brigade — Friday service</span>
+                    </div>
+                </div>
+
+                <div class="gal-item" data-category="cuisine">
+                    <img src="assets/images/gallery/sourdough.webp" alt="Sourdough, cultured butter, sea salt" loading="lazy">
+                    <div class="gal-overlay">
+                        <i data-lucide="zoom-in" class="gal-zoom-icon"></i>
+                        <span class="gal-caption">Sourdough, cultured butter, sea salt</span>
+                    </div>
+                </div>
+
+                <div class="gal-item" data-category="interiors">
+                    <img src="assets/images/gallery/private-dining-interior.webp" alt="The private dining room" loading="lazy">
+                    <div class="gal-overlay">
+                        <i data-lucide="zoom-in" class="gal-zoom-icon"></i>
+                        <span class="gal-caption">The private dining room</span>
+                    </div>
+                </div>
+
+                <div class="gal-item" data-category="events">
+                    <img src="assets/images/gallery/corporate-dinner.webp" alt="Private dining — corporate dinner" loading="lazy">
+                    <div class="gal-overlay">
+                        <i data-lucide="zoom-in" class="gal-zoom-icon"></i>
+                        <span class="gal-caption">Private dining — corporate dinner</span>
+                    </div>
+                </div>
+
+                <div class="gal-item" data-category="cuisine">
+                    <img src="assets/images/dishes/dover-sole.webp" alt="Chef's tasting menu — autumn edition" loading="lazy">
+                    <div class="gal-overlay">
+                        <i data-lucide="zoom-in" class="gal-zoom-icon"></i>
+                        <span class="gal-caption">Chef's tasting menu — autumn edition</span>
+                    </div>
+                </div>
+
+                <div class="gal-item" data-category="interiors">
+                    <img src="assets/images/gallery/crystal-detail.webp" alt="Detail — crystal, silver and linen" loading="lazy">
+                    <div class="gal-overlay">
+                        <i data-lucide="zoom-in" class="gal-zoom-icon"></i>
+                        <span class="gal-caption">Detail — crystal, silver and linen</span>
+                    </div>
+                </div>
+
+                <div class="gal-item" data-category="kitchen">
+                    <img src="assets/images/gallery/plating.webp" alt="Plating the tasting menu" loading="lazy">
+                    <div class="gal-overlay">
+                        <i data-lucide="zoom-in" class="gal-zoom-icon"></i>
+                        <span class="gal-caption">Plating the tasting menu</span>
+                    </div>
+                </div>
+
+                <div class="gal-item" data-category="events">
+                    <img src="assets/images/gallery/champagne-reception.webp" alt="Champagne reception — Mount Street" loading="lazy">
+                    <div class="gal-overlay">
+                        <i data-lucide="zoom-in" class="gal-zoom-icon"></i>
+                        <span class="gal-caption">Champagne reception — Mount Street</span>
+                    </div>
+                </div>
+
+                <div class="gal-item" data-category="events">
+                    <img src="assets/images/gallery/table-arrangement.webp" alt="Table arrangement — private event" loading="lazy">
+                    <div class="gal-overlay">
+                        <i data-lucide="zoom-in" class="gal-zoom-icon"></i>
+                        <span class="gal-caption">Table arrangement — private event</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- •••••••••••••••••••••••••••••••••••••••••••
+         SECTION 5 — FEATURED IMAGE BREAK
+         ••••••••••••••••••••••••••••••••••••••••••• -->
+    <section class="gal-featured" id="gal-featured">
+        <div class="gal-featured-bg" style="background-image: url('assets/images/interior/dining-room.webp')"></div>
+        <div class="gal-featured-overlay"></div>
+        <div class="gal-featured-content">
+            <span class="gal-ornament">✦</span>
+            <h2 class="gal-featured-heading">Designed for the Evening.</h2>
+            <p class="gal-featured-line">Every detail of this room was considered with one guest in mind — you.</p>
+        </div>
+    </section>
+
+
+    <!-- •••••••••••••••••••••••••••••••••••••••••••
+         SECTION 6 — INSTAGRAM STRIP
+         ••••••••••••••••••••••••••••••••••••••••••• -->
+    <section class="gal-instagram" id="gal-instagram">
+        <div class="container">
+            <div class="gal-insta-heading">
+                <p class="gal-insta-label">FOLLOW THE STORY</p>
+                <p class="gal-insta-title">Behind the scenes, daily on Instagram.</p>
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="gal-insta-handle">@lumiere.mayfair</a>
+            </div>
+            <div class="gal-insta-strip">
+                <div class="gal-insta-square">
+                    <img src="assets/images/gallery/instagram-1.webp" alt="Instagram preview" loading="lazy">
+                    <div class="gal-insta-hover"><i data-lucide="instagram"></i></div>
+                </div>
+                <div class="gal-insta-square">
+                    <img src="assets/images/gallery/instagram-2.webp" alt="Instagram preview" loading="lazy">
+                    <div class="gal-insta-hover"><i data-lucide="instagram"></i></div>
+                </div>
+                <div class="gal-insta-square">
+                    <img src="assets/images/gallery/instagram-3.webp" alt="Instagram preview" loading="lazy">
+                    <div class="gal-insta-hover"><i data-lucide="instagram"></i></div>
+                </div>
+                <div class="gal-insta-square">
+                    <img src="assets/images/gallery/instagram-4.webp" alt="Instagram preview" loading="lazy">
+                    <div class="gal-insta-hover"><i data-lucide="instagram"></i></div>
+                </div>
+                <div class="gal-insta-square">
+                    <img src="assets/images/gallery/instagram-5.webp" alt="Instagram preview" loading="lazy">
+                    <div class="gal-insta-hover"><i data-lucide="instagram"></i></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Reservation CTA -->
+    <div id="reservation-cta-container"></div>
+
+    <!-- Footer -->
+    <div id="footer-container"></div>
+
+    <!-- Back to Top -->
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
+    </button>
+
+    <!-- GSAP + ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <!-- Lenis Smooth Scroll -->
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.42/bundled/lenis.min.js"></script>
+
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Core JS -->
+    <script src="assets/js/core/component-loader.js"></script>
+    <script src="assets/js/core/cursor.js"></script>
+    <script src="assets/js/core/loader.js"></script>
+    <script src="assets/js/core/navbar.js"></script>
+    <script src="assets/js/core/smooth-scroll.js"></script>
+
+    <!-- Component JS -->
+    <script src="assets/js/components/animations-init.js"></script>
+
+    <!-- Page JS -->
+    <script src="assets/js/pages/gallery.js"></script>
+
+    <!-- Main JS -->
+    <script src="assets/js/main.js"></script>
+
+    <script>lucide.createIcons();</script>
+</body>
+</html>
